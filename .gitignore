@@ -27,3 +27,6 @@
 *.exe
 *.out
 *.app
+/DesignPatterns/DesignPatterns.VC.VC.opendb
+/DesignPatterns/DesignPatterns.VC.db
+/DesignPatterns/.vs/DesignPatterns/v14/.suo
