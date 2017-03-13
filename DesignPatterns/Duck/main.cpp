@@ -12,5 +12,7 @@ int main(int argc, char* argv[])
 	model.setFlyBehavior(new FlyRocketPowered);
 	model.performFly();
 
+	CallDuck caller;
+	caller.performQuack();
 	return 0;
 }

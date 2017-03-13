@@ -16,4 +16,6 @@
 #include "Quack.h"
 #include "Squeak.h"
 #include "MuteQuack.h"
+
+#include "CallDuck.h"
 #endif
