@@ -1,7 +1,11 @@
 #include "MallardDuck.h"
 
+
+
 MallardDuck::MallardDuck()
 {
+	quackBehavior = new Quack();
+	flyBehavior = new FlyWithWings();
 }
 
 
@@ -10,13 +14,7 @@ MallardDuck::~MallardDuck()
 }
 
 
-void MallardDuck::quack()
+void MallardDuck::display()
 {
-	std::cout << "Quack" << std::endl;
-}
-
-
-void MallardDuck::fly()
-{
-	std::cout << "I'm Flying" << std::endl;
+	std::cout << "Mallard Duck!" << std::endl;
 }

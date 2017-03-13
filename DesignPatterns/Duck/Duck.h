@@ -3,9 +3,29 @@
 class Duck
 {
 public:
-	Duck();
-	virtual ~Duck();
-	virtual void quack() = 0;
-	virtual void fly() = 0;
-};
+	virtual ~Duck()
+	{
+	}
+	virtual void display() = 0;
+	virtual void performFly()
+	{
+		flyBehavior->fly();
+	}
 
+	virtual void performQuack()
+	{
+		quackBehavior->quack();
+	}
+	virtual void swim()
+	{
+		std::cout << "Duck floats." << std::endl;
+	}
+
+protected:
+	Duck() : flyBehavior(0), quackBehavior(0)
+	{
+
+	}
+	flyBehavior* flyBehavior;
+	quackBehavior* quackBehavior;
+};

@@ -1,12 +1,11 @@
 #pragma once
-#include "Duck.h"
+#include "common.h"
 class MallardDuck :
 	public Duck
 {
 public:
 	MallardDuck();
 	~MallardDuck();
-	void quack();
-	void fly();
+	virtual void display();
 };
 
