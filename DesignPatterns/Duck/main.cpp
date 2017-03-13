@@ -1,10 +1,14 @@
 #include "common.h"
-#include "Duck.h"
+#include "MallardDuck.h"
+void testDuck(Duck* duck)
+{
+	duck->quack();
+	duck->fly();
+}
 int main(int argc, char* argv[])
 {
-	Duck duck;
-	duck.display();
-	duck.performFly();
+	MallardDuck duck;
+	testDuck(&duck);
 
 	return 0;
 }

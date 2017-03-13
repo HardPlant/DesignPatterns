@@ -147,19 +147,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Duck.cpp" />
-    <ClCompile Include="FlyNoWay.cpp" />
-    <ClCompile Include="FlyWithWings.cpp" />
-    <ClCompile Include="ifFlyBehavior.cpp" />
-    <ClCompile Include="ifQuackBehavior.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MallardDuck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
     <ClInclude Include="Duck.h" />
-    <ClInclude Include="FlyNoWay.h" />
-    <ClInclude Include="FlyWithWings.h" />
-    <ClInclude Include="ifFlyBehavior.h" />
-    <ClInclude Include="ifQuackBehavior.h" />
+    <ClInclude Include="MallardDuck.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
