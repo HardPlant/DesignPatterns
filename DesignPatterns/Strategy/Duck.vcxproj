@@ -21,8 +21,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A094FB50-6720-425E-AD75-CB1BE7454D86}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Duck</RootNamespace>
+    <RootNamespace>Strategy</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Strategy</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -165,6 +166,9 @@
     <ClInclude Include="Quack.h" />
     <ClInclude Include="quackBehavior.h" />
     <ClInclude Include="Squeak.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Strategy.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
