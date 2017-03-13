@@ -1,5 +1,5 @@
 #pragma once
-#include "flyBehavior.h"
+#include "common.h"
 class FlyNoWay :
 	public flyBehavior
 {

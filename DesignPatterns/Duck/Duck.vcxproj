@@ -148,14 +148,17 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MallardDuck.cpp" />
+    <ClCompile Include="ModelDuck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
     <ClInclude Include="Duck.h" />
     <ClInclude Include="flyBehavior.h" />
     <ClInclude Include="FlyNoWay.h" />
+    <ClInclude Include="FlyRocketPowered.h" />
     <ClInclude Include="FlyWithWings.h" />
     <ClInclude Include="MallardDuck.h" />
+    <ClInclude Include="ModelDuck.h" />
     <ClInclude Include="MuteQuack.h" />
     <ClInclude Include="Quack.h" />
     <ClInclude Include="quackBehavior.h" />

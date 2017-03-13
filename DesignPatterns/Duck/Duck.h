@@ -16,7 +16,13 @@ public:
 	{
 		quackBehavior->quack();
 	}
-	virtual void swim()
+	virtual void setFlyBehavior(flyBehavior* fb){
+		flyBehavior = fb;
+	}
+	virtual void setFlyBehavior(quackBehavior* qb) {
+		quackBehavior = qb;
+	}
+	void swim()
 	{
 		std::cout << "Duck floats." << std::endl;
 	}
@@ -24,7 +30,6 @@ public:
 protected:
 	Duck() : flyBehavior(0), quackBehavior(0)
 	{
-
 	}
 	flyBehavior* flyBehavior;
 	quackBehavior* quackBehavior;

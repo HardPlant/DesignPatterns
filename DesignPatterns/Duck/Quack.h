@@ -1,5 +1,5 @@
 #pragma once
-#include "quackBehavior.h"
+#include "common.h"
 class Quack :
 	public quackBehavior
 {

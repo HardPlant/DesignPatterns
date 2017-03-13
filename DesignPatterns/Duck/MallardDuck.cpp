@@ -13,7 +13,6 @@ MallardDuck::~MallardDuck()
 {
 }
 
-
 void MallardDuck::display()
 {
 	std::cout << "Mallard Duck!" << std::endl;

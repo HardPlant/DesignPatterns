@@ -1,13 +1,12 @@
 #pragma once
 #include "common.h"
-class FlyWithWings :
+class FlyRocketPowered :
 	public flyBehavior
 {
 public:
 	virtual void fly()
 	{
-		std::cout << "Take my wing!" << std::endl;
+		std::cout << "Rocket Powereddddd" << std::endl;
 	}
-
 };
 
