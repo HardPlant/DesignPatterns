@@ -147,6 +147,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Duck.cpp" />
+    <ClCompile Include="FlyNoWay.cpp" />
+    <ClCompile Include="FlyWithWings.cpp" />
     <ClCompile Include="ifFlyBehavior.cpp" />
     <ClCompile Include="ifQuackBehavior.cpp" />
     <ClCompile Include="main.cpp" />
@@ -154,6 +156,8 @@
   <ItemGroup>
     <ClInclude Include="common.h" />
     <ClInclude Include="Duck.h" />
+    <ClInclude Include="FlyNoWay.h" />
+    <ClInclude Include="FlyWithWings.h" />
     <ClInclude Include="ifFlyBehavior.h" />
     <ClInclude Include="ifQuackBehavior.h" />
   </ItemGroup>

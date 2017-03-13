@@ -1,6 +1,5 @@
 #pragma once
-#include "ifFlyBehavior.h"
-#include "ifQuackBehavior.h"
+#include "FlyWithWings.h"
 #include "common.h"
 class Duck
 {
@@ -12,7 +11,6 @@ public:
 	void performQuack();
 	void swim();
 private:
-	ifFlyBehavior flyBehavior;
-	ifQuackBehavior quackBehavior;
+	FlyWithWings flyBehavior;
 };
 

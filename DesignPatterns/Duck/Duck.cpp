@@ -18,7 +18,6 @@ void Duck::performFly()
 }
 void Duck::performQuack()
 {
-	quackBehavior.quack();
 }
 void Duck::swim()
 {

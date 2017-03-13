@@ -5,7 +5,7 @@ class ifFlyBehavior
 {
 public:
 	ifFlyBehavior();
-	void fly();
+	virtual void fly() = 0;
 	virtual ~ifFlyBehavior();
 };
 
