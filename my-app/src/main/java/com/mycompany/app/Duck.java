@@ -9,11 +9,21 @@ public abstract class Duck{
     private void performFly(){
         flyBehavior.fly();
     }
-}
-
-public interface QuackBehavior{
-    public void quack();
-}
-public interface FlyBehavior{
-    public void fly();
+    private interface QuackBehavior{
+        public void quack();
+    }
+    private interface FlyBehavior{
+        public void fly();
+    }
+    
+    private class Quack implements QuackBehavior{
+        public void quack() {
+            System.out.println("Quack");
+        }
+    }
+    private class MuteQuack implements QuackBehavior{
+        public void quack() {
+            System.out.println("Silence");
+        }
+    }
 }
