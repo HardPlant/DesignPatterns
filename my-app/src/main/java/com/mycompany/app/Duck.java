@@ -4,13 +4,16 @@ public abstract class Duck{
     QuackBehavior quackBehavior;
     FlyBehavior flyBehavior;
     public Duck(){
-        
+
+    }
+    private void performFly(){
+        flyBehavior.fly();
     }
 }
 
-class QuackBehavior{
-
+public interface QuackBehavior{
+    public void quack();
 }
-class FlyBehavior{
-
+public interface FlyBehavior{
+    public void fly();
 }
