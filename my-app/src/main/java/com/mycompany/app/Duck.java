@@ -9,6 +9,13 @@ public abstract class Duck{
     public void performFly(){
         flyBehavior.fly();
     }
+
+    public void setFlyBehavior(FlyBehavior fb){
+        flyBehavior = fb;
+    }
+    
+/* TODO : extract below things
+ */
     private interface QuackBehavior{
         public void quack();
     }
