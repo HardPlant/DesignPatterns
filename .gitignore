@@ -36,3 +36,4 @@
 *.jar
 my-app/target/*
 *.lst
+*.class
