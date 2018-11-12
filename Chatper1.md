@@ -58,3 +58,17 @@ QuackBehavior interface {quack()}
 * perFormquack(){quackBehavior.quack()} 구현
 
 * 이후 생성자에서 Behavior를 할당
+
+## 캡슐화된 행동을 바라본 큰 그림
+
+* IS-A
+
+* HAS-A
+
+Duck이 FlyBehavior를 가지고 있고, 이 클래스는 fly()를 위임함
+
+* IMPLEMENTS
+
+* 디자인 원칙
+
+상속보다 구성을 더 선호해라.
