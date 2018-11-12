@@ -55,7 +55,7 @@ QuackBehavior interface {quack()}
 
 * 인스턴스 변수 두개 생성 (FlyBehavior, QuackBehavior)
 
-* perFormquack(){quackBehavior.quack()} 구현
+* performquack(){quackBehavior.quack()} 구현
 
 * 이후 생성자에서 Behavior를 할당
 
@@ -72,3 +72,7 @@ Duck이 FlyBehavior를 가지고 있고, 이 클래스는 fly()를 위임함
 * 디자인 원칙
 
 상속보다 구성을 더 선호해라.
+
+## 전략 패턴
+
+이 패턴은 전략 패턴임
