@@ -38,4 +38,10 @@ public abstract class Duck{
             System.out.println("Silence");
         }
     }
+
+    private class FlyRocketPowered implements FlyBehavior{
+        public void fly() {
+            System.out.println("Rocket");
+        }
+    }
 }
