@@ -2,10 +2,8 @@ package com.mycompany.observer;
 
 import java.util.ArrayList;
 
-import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
-
 public class WeatherData implements Subject {
-    private ArrayList<E> observers;
+    private ArrayList observers;
     private float temperature;
     private float humidity;
     private float pressure;
