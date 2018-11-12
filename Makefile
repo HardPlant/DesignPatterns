@@ -11,6 +11,9 @@ init:
 run:
 	cd $(artifactId); java -cp target/$(artifactId)-$(version)-SNAPSHOT.jar $(groupId).$(module)
 
+test: # compile code and package as jar
+	mvn test -f $(artifactId)/pom.xml
+
 package: # compile code and package as jar
 	mvn package -f $(artifactId)/pom.xml
 
