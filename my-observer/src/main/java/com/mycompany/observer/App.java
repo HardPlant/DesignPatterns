@@ -11,6 +11,6 @@ public class App
         WeatherData weatherData = new WeatherData();
 
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
-        
+        weatherData.setMeasurements(80, 65, 30.4f);
     }
 }
