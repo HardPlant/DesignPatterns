@@ -20,5 +20,36 @@ fly(), quack() 중 일부만 사용해야 하는 문제
 
 ## 변화하는 곳과 변하지 않는 곳을 분리
 
+Duck():
+    Behaviors:
+        Fly()
+        Quack()-quack, squeak, slilence
 
+* 디자인 원칙
+
+구현 말고 인터페이스를 프로그램해라
+
+* supertype 프로그램하기
+
+실제 객체 타입을 알지객 않고 모든 변수의 타입을 추상 메서드나 인터페이스로 프로그램
+이후 슈퍼타입 변수를 가진 객체들이 구체적인 구현을 가질 수 있도록
+
+직접 인스턴스화해 할당하는 것보다, 구체적 구현을 런타임에 할당
+
+Animal animal = getAnimal(); // new Dog()를 하는 것 보다 더 supertype함
+
+## 오리 행동 구현
+
+FlyBehavior interface {fly()}
+    ..> FlyWithWings
+    ..> FlyNoWay
+
+QuackBehavior interface {quack()}
+    ..> Quack
+    ..> Squeak
+    ..> MuteQuack
+
+## 행동 합치기
+
+각 행동을 위임하는 것이 중요함
 
