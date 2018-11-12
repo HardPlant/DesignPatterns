@@ -53,3 +53,8 @@ QuackBehavior interface {quack()}
 
 각 행동을 위임하는 것이 중요함
 
+* 인스턴스 변수 두개 생성 (FlyBehavior, QuackBehavior)
+
+* perFormquack(){quackBehavior.quack()} 구현
+
+* 이후 생성자에서 Behavior를 할당
