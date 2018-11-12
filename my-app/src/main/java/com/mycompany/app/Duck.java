@@ -1,10 +1,16 @@
 package com.mycompany.app;
 
 public abstract class Duck{
-    public void fly() {
+    QuackBehavior quackBehavior;
+    FlyBehavior flyBehavior;
+    public Duck(){
         
     }
-    public void quack() {
-        
-    }
+}
+
+class QuackBehavior{
+
+}
+class FlyBehavior{
+
 }
