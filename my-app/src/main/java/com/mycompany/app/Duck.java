@@ -6,7 +6,7 @@ public abstract class Duck{
     public Duck(){
 
     }
-    private void performFly(){
+    public void performFly(){
         flyBehavior.fly();
     }
     private interface QuackBehavior{
