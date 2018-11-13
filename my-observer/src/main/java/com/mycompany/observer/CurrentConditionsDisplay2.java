@@ -15,7 +15,7 @@ public class CurrentConditionsDisplay2 implements Observer{
 
     public CurrentConditionsDisplay2(Observable observable){
         this.observable = observable;
-        weatherData.registerObserver(this);
+        observable.addObserver(this);
     }
 
     public void update(Observable obs, Object arg){
