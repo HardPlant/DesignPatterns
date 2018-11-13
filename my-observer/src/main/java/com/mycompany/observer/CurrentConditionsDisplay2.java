@@ -2,13 +2,13 @@ package com.mycompany.observer;
 
 import com.mycompany.observer.Observer;
 import com.mycompany.observer.Subject;
-import com.mycompany.observer.WeatherData;
+import com.mycompany.observer.WeatherDataOb;
 
 import java.util.Observable;
 
 import com.mycompany.observer.DisplayElement;
 
-public class CurrentConditionsDisplay implements Observer{
+public class CurrentConditionsDisplay2 implements Observer{
     Observable observable;
     private float temperature;
     private float humidity;
@@ -19,8 +19,8 @@ public class CurrentConditionsDisplay implements Observer{
     }
 
     public void update(Observable obs, Object arg){
-        if (obs instanceof WeatherData){
-            WeatherData weatherData = (WeatherData)obs;
+        if (obs instanceof WeatherDataOb){
+            WeatherDataOb weatherData = (WeatherDataOb)obs;
             this.temperature = weatherData.getTemperature();
             this.humidity = weatherData.getHumidity();
             display();
