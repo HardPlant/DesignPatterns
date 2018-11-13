@@ -23,4 +23,22 @@ public class WeatherDataOb extends Observable {
         this.pressure = pressure;
         measurementsChanged();
     }
+    /**
+     * @return the humidity
+     */
+    public float getHumidity() {
+        return humidity;
+    }
+    /**
+     * @return the pressure
+     */
+    public float getPressure() {
+        return pressure;
+    }
+    /**
+     * @return the temperature
+     */
+    public float getTemperature() {
+        return temperature;
+    }
 }
