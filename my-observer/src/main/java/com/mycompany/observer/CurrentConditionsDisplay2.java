@@ -2,12 +2,15 @@ package com.mycompany.observer;
 
 import com.mycompany.observer.Observer;
 import com.mycompany.observer.Subject;
+
+import java.util.Observable;
+
 import com.mycompany.observer.DisplayElement;
 
-public class CurrentConditionsDisplay implements Observer, DisplayElement{
+public class CurrentConditionsDisplay implements Observer{
+    Observable observable;
     private float temperature;
     private float humidity;
-    private Subject weatherData;
 
     public CurrentConditionsDisplay(Subject weatherData){
         this.weatherData = weatherData;
