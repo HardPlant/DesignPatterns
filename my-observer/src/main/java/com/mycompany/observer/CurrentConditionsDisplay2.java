@@ -2,6 +2,7 @@ package com.mycompany.observer;
 
 import com.mycompany.observer.Observer;
 import com.mycompany.observer.Subject;
+import com.mycompany.observer.WeatherData;
 
 import java.util.Observable;
 
@@ -12,16 +13,18 @@ public class CurrentConditionsDisplay implements Observer{
     private float temperature;
     private float humidity;
 
-    public CurrentConditionsDisplay(Subject weatherData){
-        this.weatherData = weatherData;
+    public CurrentConditionsDisplay(Observable observable){
+        this.observable = observable;
         weatherData.registerObserver(this);
     }
 
-    public void update(float temperature, float humidity, float pressure){
-        this.temperature = temperature;
-        this.humidity = humidity;
-        display();
+    public void update(Observable obs, Object arg){
+        if (obs instanceof WeatherData){
+
+            display();
+        }
     }
+
     public void display(){
         System.out.println("Current coditions: " 
             + temperature + " and " + humidity +" humidity ");
