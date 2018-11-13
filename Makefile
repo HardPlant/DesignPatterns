@@ -1,5 +1,5 @@
-groupId=com.mycompany.observer
-artifactId=my-observer
+groupId=com.mycompany.designpattern
+artifactId=my-decorator
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
