@@ -92,3 +92,31 @@ o는 알림을 보내는 주제고, Object arg는 DO임
 데이터가 너무 자주 업데이트되서 주기를 설정할 필요가 있을 떄
 clearChanged(), hasChanged() 등도 있음
 
+### 옵저버 알림의 순서에 영향을 받지 않음
+
+### java.util.Observable의 안좋은 점
+
+* 클래스임
+
+다른 클래스 재사용 불가
+
+* Observable 인터페이스가 없음
+
+빌트인 옵저버 API에 맞는 사용자 객체를 작성할 수 없음
+
+* 중요한 메서드가 protected암
+
+setChanged()를 밖에서 부를 수 없음
+Observable 클래스를 인스턴스화해 다른 객체와 조합할 수 없음
+
+* 무엇을 해야 하나
+
+필요할 때 쓰고, 아니면 직접 구현해서 써라
+
+### JDK의 다른 부분
+
+JavaBean, Swing에서 다른 구현이 가능
+
+JButton 수퍼클래스 AbstractButton에 리스너 메서드가 있음
+Swing ActionListner
+
