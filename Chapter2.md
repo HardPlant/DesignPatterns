@@ -63,3 +63,32 @@ Subject만 데이터를 갖고 있기 때문에, 옵저버는 Subject에 의존�
 둘이 강하게 결합되어 있지 않으므로
 
 * 변경이 주제나 옵저버에 서로 영향을 주지 않음
+
+### 자바 빌트인 옵저버 패턴
+
+* Observable "클래스", Observer 인터페이스
+
+* 옵저버가 되려면 Observer 인터페이스 구현
+
+이후 Observable 클래스의 addObserver(), removeObserver() 호출
+
+* Observable이 알림을 보내려면
+
+setChanged()로 변경을 확인하고
+notifyObservers()나 notifyObservers(Object arg)
+
+* Observer가 알림을 받으려면
+
+update(Observable o, Object arg) 메서드를 구현
+
+o는 알림을 보내는 주제고, Object arg는 DO임
+
+데이터를 옵저버에게 push하려면 notifyObserver(arg),
+옵저버가 데이터를 받으려면 .. update()에서 obs를 덕타이핑(instanceof)
+
+* setChanged()
+
+먼저 설정하고 notify()를 호출해야 옵저버에게 알림을 감
+데이터가 너무 자주 업데이트되서 주기를 설정할 필요가 있을 떄
+clearChanged(), hasChanged() 등도 있음
+
