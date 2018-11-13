@@ -1,10 +1,10 @@
 package com.mycompany.observer;
 
-import com.mycompany.observer.Observer;
 import com.mycompany.observer.Subject;
 import com.mycompany.observer.WeatherDataOb;
 
 import java.util.Observable;
+import java.util.Observer;
 
 import com.mycompany.observer.DisplayElement;
 
