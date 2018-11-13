@@ -13,7 +13,7 @@ public class CurrentConditionsDisplay2 implements Observer{
     private float temperature;
     private float humidity;
 
-    public CurrentConditionsDisplay(Observable observable){
+    public CurrentConditionsDisplay2(Observable observable){
         this.observable = observable;
         weatherData.registerObserver(this);
     }

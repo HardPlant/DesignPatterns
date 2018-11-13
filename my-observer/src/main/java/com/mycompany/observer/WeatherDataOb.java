@@ -9,7 +9,7 @@ public class WeatherDataOb extends Observable {
     private float humidity;
     private float pressure;
 
-    public WeatherData() {
+    public WeatherDataOb() {
     }
 
     public void measurementsChanged() {
