@@ -10,7 +10,6 @@ public class WeatherDataOb extends Observable {
     private float pressure;
 
     public WeatherData() {
-        observers = new ArrayList();
     }
 
     @Override
