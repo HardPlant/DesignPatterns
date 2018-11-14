@@ -85,5 +85,21 @@ Beverage
 
 ### 실세계 데코레이터
 
-자바 I/D
+자바 I/O에서 사용된 예로
+```
+LineNumberInputStream(  // 구체적 데코레이터, 라인 넘버를 읽는 능력 추가
+    BuffferedInputStream(   // 구체적 데코레이터, 입력을 버퍼해서 성능 향상, readLine() 메서드를 추가해서 인터페이스 보강
+        FileInputStream(File))) // 데코레이트되는 컴포넌트
+```
 
+실제 구조는
+
+InputStream: (abstract component)
+    -> FileInputStream
+    -> StringBufferInputStream
+    -> ByteArrayInputStream : 구체적 데코레이터
+    -> FilterInputStream : 추상 데코레이터
+        -> PushbackInputStream
+        -> BufferedInputStream
+        -> DataInputStream
+        -> LineNumberInputStream : 모두 구체적 데코레이터
