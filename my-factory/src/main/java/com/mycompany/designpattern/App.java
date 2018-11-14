@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        PizzaStore nyStore = new NYPizzaStore();
+        
+        Pizza pizza = nyStore.orderPizza("cheese");
+        System.out.println("피자는 : "+pizza.getName());
+        
     }
 }
