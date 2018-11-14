@@ -28,3 +28,21 @@ Pizza orderPizza(String type){
 객체의 세부 생성을 담당하는 팩토리
 
 orderPizza()를 클라이언트로 만듬
+
+### 간단한 피자 팩토리
+
+```java
+public class SimplePizzaFactory{
+    public Pizza createPizza(String type){
+        Pizza pizza = null;
+        if(type.equals("cheese"){
+            pizza = new CheesePizza();
+        }//...
+    }
+    return pizza
+}
+```
+
+* 문제를 다른 객체에 옮겨놓은 것 뿐이지 않나? : 많은 클라이언트를 가질 수 있음
+
+* 스태틱 팩토리 : 인스턴스화 없이 사용할 수 있지만 서브클래스 불가, create() 메서드의 행동 변경 불가
