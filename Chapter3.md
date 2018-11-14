@@ -64,3 +64,11 @@ Component{methodA(), methodB()}
 각 컴포넌트는 데코레이터에 감싸질 수 있음
 데코레이터는 HAS-A 컴포넌트임, 데코레이터는 컴포넌트를 참조하는 인스턴스 변수를 가지고 있음
 
+##### 음료를 데코레이트하면..
+
+Beverage
+    -> HouseBlend
+    -> DarkRoast
+    -> CondimentDecorator
+        -> Milk{beverage: Beverage, cost()}
+        -> Mocha{beverage: Beverage, cost()}
