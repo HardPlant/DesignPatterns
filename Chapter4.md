@@ -88,3 +88,17 @@ if else문을 잘 만들자
 
 팩토리 메서드는 객체 생성을 처리하고 서브클래스로 캡슐화함
 슈퍼클래스의 클라이언트 코드와 서브클래스의 객체 생성 코드를 분리함
+
+### 팩토리 메서드 패턴
+
+* Creator 클래스
+
+PizzaStore{createPizza(), orderPizza()} // orderPizza() 중 createPizza() 호출
+    ->NYPizzaStore{createPizza()}
+    ->ChicagoPizzaStore{createPizza()}
+
+* Product 클래스
+
+Pizza
+    -> (NY*Pizza)
+    -> (Chicago*Pizza)
