@@ -46,3 +46,19 @@ public class SimplePizzaFactory{
 * 문제를 다른 객체에 옮겨놓은 것 뿐이지 않나? : 많은 클라이언트를 가질 수 있음
 
 * 스태틱 팩토리 : 인스턴스화 없이 사용할 수 있지만 서브클래스 불가, create() 메서드의 행동 변경 불가
+
+사실 이건 디자인 패턴이 아니라 일종의 프로그래밍 숙어임
+
+### 프랜차이즈된 피자 스토어
+
+지역별로 다른 피자 팩토리?
+피자스토어가 피자 팩토리를 구성할 수 있게 하기
+
+```java
+NYPizzaFactory nyfactory = new NYPizzaFactory();
+ChichagoPizzaFactory chichagoFactory = new ChicagoFactory();
+//...
+```
+
+### 피자 스토어 프레임워크
+
