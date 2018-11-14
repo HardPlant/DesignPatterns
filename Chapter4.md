@@ -102,3 +102,11 @@ PizzaStore{createPizza(), orderPizza()} // orderPizza() 중 createPizza() 호출
 Pizza
     -> (NY*Pizza)
     -> (Chicago*Pizza)
+
+* 병렬적 접근
+
+제품 정보를 각 생성자에게 캡슐화함
+
+팩토리 패턴은 객체 생성의 인터페이스를 정의하고, 서브클래스에게 인스턴스화할 클래스를 결정하게 함
+서브클래스로 인스턴스화를 지연시킴
+
