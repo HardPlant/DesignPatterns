@@ -49,3 +49,18 @@ Beverage{getDescription(), cost{}}
 * 데코레이터는 객체의 행동의 전이나 후에 자신의 행동을 놓고 데코레이트되는 객체에 나머지 일을 하도록 위임함
 
 * 객체는 언제나 데코레이트될 수 있으므로, 동적으로 많은 데코레이터를 데코레이트할 수 있음
+
+##### 정의
+
+객체에 동적으로 추가적인 책임을 부여함
+데코레이터는 기능을 확장하는 데 서브클래스보다 유연한 대체제를 제공함
+
+Component{methodA(), methodB()}
+    -> ConcreteComponent{methodA(), methodB()}
+    -> Decorator{methodA(), methodB()}
+        -> ConcreteDecorator{wrappedObj:Component, methodA(), methodB(), newBehavior()}
+        -> ConcreteDecorator{wrappedObj:Component,newState:Object, methodA(), methodB()}
+
+각 컴포넌트는 데코레이터에 감싸질 수 있음
+데코레이터는 HAS-A 컴포넌트임, 데코레이터는 컴포넌트를 참조하는 인스턴스 변수를 가지고 있음
+
