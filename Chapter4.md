@@ -62,3 +62,13 @@ ChichagoPizzaFactory chichagoFactory = new ChicagoFactory();
 
 ### 피자 스토어 프레임워크
 
+피자스토어를 추상 클래스로 만들어 NYPizzaStore, ChicagoPizzaStore...를 만들자
+
+##### 서브클래스가 결정하도록 허락하기
+
+이미 PizzaStore는 잘 갖춰진 주문 시스템을 갖춰져 있고, 모든 프렌차이즈가 일관되게 보장되게 하려고 함
+
+뉴욕 피자는 얇은 크러스트, 시카고 피자는 굵은 크러스트 등이 있음
+모든 바리에이션을 createPizza()에 넣고 맞는 종류의 피자를 생성할 책임을 부여함
+
+피자스토어의 구체적 서브클래스가 잘 튜닝된 orderPizza() 메서드를 만들도록 함
