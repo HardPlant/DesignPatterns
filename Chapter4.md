@@ -72,3 +72,13 @@ ChichagoPizzaFactory chichagoFactory = new ChicagoFactory();
 모든 바리에이션을 createPizza()에 넣고 맞는 종류의 피자를 생성할 책임을 부여함
 
 피자스토어의 구체적 서브클래스가 잘 튜닝된 orderPizza() 메서드를 만들도록 함
+
+PizzaStore{createPizza(), orderPizza()}
+orderPizza() 중 createPizza()가 호출됨
+
+서브클래스 NY, Chichago에는 createPizza()가 있음
+다른 말로 얘들은 분리되있음
+
+##### 프랜차이즈 피자스토어를 만들자
+
+if else문을 잘 만들자
