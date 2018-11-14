@@ -103,3 +103,8 @@ InputStream: (abstract component)
         -> BufferedInputStream
         -> DataInputStream
         -> LineNumberInputStream : 모두 구체적 데코레이터
+
+### 자바 I/O 데코레이터 작성해보기
+
+* 모든 upcase를 lowercase로 바꾸는 데코레이터 작성
+
