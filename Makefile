@@ -1,5 +1,5 @@
 groupId=com.mycompany.designpattern
-artifactId=my-decorator
+artifactId=my-factory
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
