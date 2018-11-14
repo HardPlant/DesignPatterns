@@ -72,3 +72,18 @@ Beverage
     -> CondimentDecorator
         -> Milk{beverage: Beverage, cost()}
         -> Mocha{beverage: Beverage, cost()}
+
+##### 주의사항
+
+* 데코레이터는 구체적인 컴포넌트 타입에 사용할 수 없음
+
+* 구체적인 컴포넌트로 코드를 한다면 앱 디자인과 데코레이터 사용을 다시 생각해봐야 함
+
+* 데코레이터는 통상적으로 팩토리, 빌더 패턴과 같이 쓰이며 데코레이터가 잘 캡슐화된 구체적인 컴포넌트를 생성하는 게 가능함
+
+* 데코레이터가 중첩되도, 마지막에 PrettyPrint하는 데코레이터를 추가해 "Mocha, Some, Mocha"를 "2 Mocha, Some"으로 반환하는 행동이 가능함
+
+### 실세계 데코레이터
+
+자바 I/D
+
