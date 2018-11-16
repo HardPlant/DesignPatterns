@@ -34,3 +34,21 @@ public class LightOnCommand implements Command{
     }
 }
 ```
+
+##### 커맨드 객체 사용
+
+원격 리모콘 버튼
+
+```java
+public class SimpleRemoteControl{
+    Command slot;
+    public SimpleRemoteControl(){}
+    public void setCommand(Command command){
+        slot = command;
+    }
+    public void buttonWasPressed(){
+        slot.execute();
+    }
+}
+```
+
