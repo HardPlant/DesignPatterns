@@ -36,6 +36,8 @@ public class App
         LightOnCommand kitchenOn = new LightOnCommand(kitchenLight);
         LightOffCommand kitchenOff = new LightOffComand(kitchenLight);
 
-
+        remote.setCommand(0, livingRoomLightOn, livingRoomOff);
+        remote.setCommand(1, kitchenOn,kitchenOff);
+        
     }
 }
