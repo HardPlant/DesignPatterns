@@ -38,6 +38,7 @@ public class App
 
         remote.setCommand(0, livingRoomLightOn, livingRoomOff);
         remote.setCommand(1, kitchenOn,kitchenOff);
-        
+
+        System.out.println(RemoteControl);
     }
 }
