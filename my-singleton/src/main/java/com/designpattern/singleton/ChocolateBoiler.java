@@ -3,10 +3,17 @@ package com.designpattern.singleton;
 public class ChocolateBoiler{
     private boolean empty;
     private boolean boiled;
+    private static ChocolateBoiler chocolateBoiler;
 
-    public ChocolateBoiler(){
-        empty = ture;
-        boiled = false;
+    private ChocolateBoiler(){
+        chocolateBoiler.empty = true;
+        chocolateBoiler.boiled = false;
+    }
+    public static ChocolateBoiler getInstance(){
+        if(chocolateBoiler == null){
+            chocolateBoiler = new ChocolateBoiler();
+        }
+        return chocolateBoiler;
     }
 
     public void fill(){
