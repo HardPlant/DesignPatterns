@@ -8,5 +8,8 @@
 ```java
 public MyClass{
     private MyClass(){}
+    public static MyClass getInstance(){
+        
+    }
 }
 ```
