@@ -18,3 +18,6 @@ public MyClass{
     }
 }
 ```
+
+구현에 공개된 생성자가 없고, getInstance()로 받는 것이 핵심임
+
