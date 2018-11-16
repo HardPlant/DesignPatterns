@@ -25,6 +25,22 @@ public MyClass{
 
 클래스가 하나의 인스턴스만 가지고 있고, 전역 접근지점을 제공하는 것
 
-### 쓰레딩을 할 때...............
+### 쓰레딩을 할 때
 
+이 정의는 쓰레드 안전하지 않음
+한 쓰레드가 null 체크를 하고 있을 때, 다른 쓰레드가 객체를 생성하고, null 체크를 완료한 쓰레드가 객체를 다시 생성해 스태틱 변수에 할당하면 객체는 두개가 됨
 
+```java
+public MyClass{
+    private static MyClass uniqueInstance;
+
+    private MyClass(){}
+    public static synchronized MyClass getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new MyClass();
+        }
+        return uniqueInstance
+    }
+}
+```
+getInstance()는 동기화를 해줄 필요가 있음
