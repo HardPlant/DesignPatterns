@@ -7,9 +7,14 @@
 
 ```java
 public MyClass{
+    pricate static MyClass uniqueInstance;
+
     private MyClass(){}
     public static MyClass getInstance(){
-        return new MyClass();
+        if(uniqueInstance==null){
+            uniqueInstance = new MyClass();
+        }
+        return uniqueInstance
     }
 }
 ```
