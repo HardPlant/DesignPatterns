@@ -72,3 +72,22 @@ public class SimpleRemoteControl{
 
 여러개 부여해놓고 거기에 커맨드를 저장하는 것도 괜찮을 것 같음
 리모콘을 `invoker`로 지정하고, 버튼이 눌러질 때마다 해당하는 커맨드를 실행할 것임
+
+```java
+    public RemoteControl(){
+        onCommands = new Command[7];
+        offCommands = new Command[7];
+
+        Command noCommand = new NoCommand();
+        for(int i=0;i<7;i++){
+            onCommands[i] = noCommand;
+            offCommands[i] = noCommand;
+        }
+    }
+```
+
+여기서 아무 것도 하지 않는 NoCommand를 구현했는데, nullcheck를 하는 방법도 있지만 널 객체를 이용하면 클래스 검사하는 것도 가능함
+
+널 객체는 의미있는 객체를 만들고, 클라이언트가 null 처리하는 책임을 해제함
+
+### 되돌리기 버튼 만들기
