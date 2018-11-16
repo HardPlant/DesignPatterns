@@ -3,8 +3,8 @@ package com.designpattern.command;
 import com.designpattern.command.Command;
 
 public class RemoteControl{
-    command[] onCommands;
-    command[] offCommands;
+    Command[] onCommands;
+    Command[] offCommands;
 
     public RemoteControl(){
         onCommands = new Command[7];
