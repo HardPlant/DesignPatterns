@@ -14,5 +14,12 @@ public class App
 
         remote.setCommand(lightOn);
         remote.buttonWasPressed();
+
+        GarageDoor garagedoor = new GarageDoor();
+        GarageDoorOpenCommand garageOpen = new GarageDoorOpenCommand(garagedoor);
+
+        remote.setCommand(garageOpen);
+        remote.buttonWasPressed();
+        
     }
 }
