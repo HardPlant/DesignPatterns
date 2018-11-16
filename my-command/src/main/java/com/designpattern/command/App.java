@@ -21,8 +21,9 @@ public class App
         remote.setCommand(garageOpen);
         remote.buttonWasPressed();
         
+        complicated();
     }
-    public void complicated(){
+    public static void complicated(){
         RemoteControl remote = new RemoteControl();
 
         Light livingRoomLight = new Light();
@@ -34,9 +35,9 @@ public class App
         LightOffCommand livingRoomOff = new LightOffCommand(livingRoomLight);
         
         LightOnCommand kitchenOn = new LightOnCommand(kitchenLight);
-        LightOffCommand kitchenOff = new LightOffComand(kitchenLight);
+        LightOffCommand kitchenOff = new LightOffCommand(kitchenLight);
 
-        remote.setCommand(0, livingRoomLightOn, livingRoomOff);
+        remote.setCommand(0, livingRoomOn, livingRoomOff);
         remote.setCommand(1, kitchenOn,kitchenOff);
 
         System.out.println(remote);
