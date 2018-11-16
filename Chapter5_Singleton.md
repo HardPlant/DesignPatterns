@@ -44,3 +44,31 @@ public MyClass{
 }
 ```
 getInstance()는 동기화를 해줄 필요가 있음
+
+##### 성능 향상 기법
+
+getInstance() synchronize는 꽤 비쌈
+
+* getInstance()의 성능이 중요하지 않을 때
+
+그냥 아무것도 하지 않으면 됨. getInstance()를 synchronize하는 것이 직관적인 구현임
+
+* 항상 싱글턴 객체를 사용할 때
+
+미리 만들어두면 됨
+
+```java
+public class Singleton{
+    private static Singleton uniqueInstance = new Singleton();
+
+    private Singleton(){}
+    public static Singleton getInstance(){
+        return uniqueInstance
+    }
+}
+```
+
+이렇게 하면 JVM이 클래스를 로드하는 즉시 싱글턴 객체를 만듬
+JVM이 만드므로 어떤 스레드가 이 클래스에 접근하기 전에 생성이 완료된 상태가 됨
+
+* 더블체크 록을 만들어 synchronization 감소
