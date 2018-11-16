@@ -1,5 +1,5 @@
-groupId=com.mycompany.designpattern
-artifactId=my-factory
+groupId=com.designpattern.singleton
+artifactId=my-singleton
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
