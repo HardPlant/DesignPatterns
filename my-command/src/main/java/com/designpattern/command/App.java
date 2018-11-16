@@ -11,5 +11,8 @@ public class App
         SimpleRemoteControl remote = new SimpleRemoteControl();
         Light light = new Light();
         LightOnCommand lightOn = new LightOnCommand();
+
+        remote.setCommand(lightOn);
+        remote.buttonWasPressed();
     }
 }
