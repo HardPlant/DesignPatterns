@@ -16,13 +16,24 @@ public class RemoteControl{
             offCommands[i] = noCommand;
         }
     }
-    public void setCommand(){
-
+    public void setCommand(int slot, Command onCommand, Command offCommand){
+        onCommands[slot]=onCommand;
+        offCommands[slot]=offCommand;
     }
     public void onButtonWasPushed(){
-
+        
     }
     public void offButtonWasPushed(){
 
+    }
+    @Override
+    public String toString() {
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("\n-----Remote Control------");
+        for(int i=0; i<onCommands.length;i++){
+            stringBuffer.append("[slot"+i+"] "+onCommands.[i].getClass().getName()
+                +   "   "+ offCommands[i].getClass().getName() + "\n");
+        }
+        return stringBuffer.toString();
     }
 }
