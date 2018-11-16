@@ -72,3 +72,24 @@ public class Singleton{
 JVM이 만드므로 어떤 스레드가 이 클래스에 접근하기 전에 생성이 완료된 상태가 됨
 
 * 더블체크 록을 만들어 synchronization 감소
+
+```java
+public class Singleton{
+    private volatile Singleton uniqueInstance;
+
+    private Singleton(){}
+    public static Singleton getInstance(){
+        if(uniqueInstance == null){
+            synchronized(Singleton.class){
+                uniqueInstance = new Singleton();
+            }
+        }
+        return uniqueInstance;
+    }
+}
+```
+* volatile 키워드는 쓰레드들이 싱글턴 객체를 초기화할 때 적절히 처리할 수 있도록 보장함
+
+단, Java 1.4 이상에서 지원함
+
+getInstance()의 성능이 중요하면 이 방법이 극적으로 오버헤드를 줄일 수 있음
