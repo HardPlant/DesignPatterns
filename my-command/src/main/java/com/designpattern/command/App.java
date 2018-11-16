@@ -8,6 +8,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        SimpleRemoteControl remote = new SimpleRemoteControl();
+        Light light = new Light();
+        LightOnCommand lightOn = new LightOnCommand();
     }
 }
