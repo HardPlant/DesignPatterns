@@ -7,7 +7,7 @@
 
 ```java
 public MyClass{
-    pricate static MyClass uniqueInstance;
+    private static MyClass uniqueInstance;
 
     private MyClass(){}
     public static MyClass getInstance(){
@@ -26,3 +26,5 @@ public MyClass{
 클래스가 하나의 인스턴스만 가지고 있고, 전역 접근지점을 제공하는 것
 
 ### 쓰레딩을 할 때...............
+
+
