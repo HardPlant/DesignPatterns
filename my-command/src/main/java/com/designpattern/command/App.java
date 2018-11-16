@@ -22,4 +22,20 @@ public class App
         remote.buttonWasPressed();
         
     }
+    public void complicated(){
+        RemoteControl remote = new RemoteControl();
+
+        Light livingRoomLight = new Light();
+        Light kitchenLight = new Light();
+        GarageDoor garagedoor = new GarageDoor();
+        Stereo stereo = new Stereo();
+
+        LightOnCommand livingRoomOn = new LightOnCommand(livingRoomLight);
+        LightOffCommand livingRoomOff = new LightOffCommand(livingRoomLight);
+        
+        LightOnCommand kitchenOn = new LightOnCommand(kitchenLight);
+        LightOffCommand kitchenOff = new LightOffComand(kitchenLight);
+
+
+    }
 }
