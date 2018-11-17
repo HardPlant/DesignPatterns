@@ -21,7 +21,7 @@ public class App
         remote.setCommand(garageOpen);
         remote.buttonWasPressed();
         
-        ceiling();
+        macro();
     }
     public static void complicated(){
         RemoteControl remote = new RemoteControl();
@@ -78,6 +78,12 @@ public class App
         MacroCommand partyOffMacro = new MacroCommand(partyOff);
 
         remote.setCommand(0, partyOnMacro, partyOffMacro);
+        System.out.println("Pochit");
+        remote.onButtonWasPushed(0);
+        System.out.println("Pochit");
+        remote.offButtonWasPushed(0);
+        System.out.println("Pochit");
+        remote.undoButtonPushed();
     }
     }
 }
