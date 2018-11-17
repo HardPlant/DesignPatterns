@@ -21,7 +21,7 @@ public class App
         remote.setCommand(garageOpen);
         remote.buttonWasPressed();
         
-        complicated();
+        ceiling();
     }
     public static void complicated(){
         RemoteControl remote = new RemoteControl();
@@ -56,5 +56,8 @@ public class App
         CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
         CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan)
         remote.setCommand(0, ceilingFanHigh, ceilingFanOff);
+        remote.onButtonWasPushed(0);
+        remote.offButtonWasPushed(0);
+        remote.undoButtonPushed();
     }
 }
