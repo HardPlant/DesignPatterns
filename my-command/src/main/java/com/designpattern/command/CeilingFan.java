@@ -15,22 +15,22 @@ public class CeilingFan {
 
     public void high() {
         speed = HIGH;
-        System.out.print("["+location+"]"+"High!");
+        System.out.println("["+location+"]"+"High!");
     }
     
     public void medium() {
         speed = MED;
-        System.out.print("["+location+"]"+"Mid!");
+        System.out.println("["+location+"]"+"Mid!");
     }
     
     public void low() {
         speed = LOW;
-        System.out.print("["+location+"]"+"Low!");
+        System.out.println("["+location+"]"+"Low!");
     }
     
     public void off() {
         speed = OFF;
-        System.out.print("["+location+"]"+"Off!");
+        System.out.println("["+location+"]"+"Off!");
     }
 
     /**
