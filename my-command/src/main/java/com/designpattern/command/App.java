@@ -49,4 +49,12 @@ public class App
         remote.offButtonWasPushed(1);
         remote.undoButtonPushed();
     }
+    public static void ceiling(){
+        RemoteControl remote = new RemoteControl();
+        CeilingFan ceilingFan = new CeilingFan("LivingRoom");
+
+        CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+        CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan)
+        remote.setCommand(0, ceilingFanHigh, ceilingFanOff);
+    }
 }
