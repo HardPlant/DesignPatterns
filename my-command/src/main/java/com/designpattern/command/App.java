@@ -54,7 +54,7 @@ public class App
         CeilingFan ceilingFan = new CeilingFan("LivingRoom");
 
         CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
-        CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan)
+        CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
         remote.setCommand(0, ceilingFanHigh, ceilingFanOff);
         remote.onButtonWasPushed(0);
         remote.offButtonWasPushed(0);
