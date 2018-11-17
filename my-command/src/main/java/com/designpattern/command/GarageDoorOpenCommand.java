@@ -1,6 +1,5 @@
 package com.designpattern.command;
 
-import com.designpattern.command.GarageDoor;
 
 public class GarageDoorOpenCommand implements Command{
     private GarageDoor door;
@@ -10,5 +9,8 @@ public class GarageDoorOpenCommand implements Command{
     @Override
     public void execute() {
         door.up();
+    }
+    public void undo() {
+        
     }
 }

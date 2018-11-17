@@ -44,7 +44,9 @@ public class App
 
         remote.onButtonWasPushed(0);
         remote.offButtonWasPushed(0);
+        remote.undoButtonPushed();
         remote.onButtonWasPushed(1);
         remote.offButtonWasPushed(1);
+        remote.undoButtonPushed();
     }
 }
