@@ -60,4 +60,24 @@ public class App
         remote.offButtonWasPushed(0);
         remote.undoButtonPushed();
     }
+    public static void macro() {
+        RemoteControl remote = new RemoteControl();
+
+        Light livingRoomLight = new Light();
+        Light kitchenLight = new Light();
+        LightOnCommand livingRoomOn = new LightOnCommand(livingRoomLight);
+        LightOffCommand livingRoomOff = new LightOffCommand(livingRoomLight);
+        
+        LightOnCommand kitchenOn = new LightOnCommand(kitchenLight);
+        LightOffCommand kitchenOff = new LightOffCommand(kitchenLight);
+        
+        Command[] partyOn = {livingRoomOn, kitchenOn};
+        Command[] partyOff = {livingRoomOff, kitchenOff};
+
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
+        remote.setCommand(0, partyOnMacro, partyOffMacro);
+    }
+    }
 }
