@@ -97,3 +97,26 @@ public class SimpleRemoteControl{
 
 ### 매크로
 
+커맨드들을 집합으로 삼은 다음, Command를 구현하는 MacroCommand를 만들어 기존의 버튼에 넣을 수 있음
+MacroCommand는 Command[]를 매개변수로 받아 저장한 뒤, execute()와 undo()를 해당 Command 배열에 차례로 수행하게 만듬
+
+```java
+public class MacroCommand implements Command{
+    Command[] commands;
+    public MacroCommand(Command[] commands){
+        this.commands = commands;
+    }
+    public void execute() {
+        for(int i=0; i<commands.length; i++){
+            commands[i].execute();
+        }
+        
+    }
+    public void undo() {
+        for(int i=commands.length-1; 0<=i;i--){
+            commands[i].undo();
+        }
+    }
+}
+```
+
