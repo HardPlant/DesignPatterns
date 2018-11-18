@@ -1,5 +1,5 @@
-groupId=com.designpattern.command
-artifactId=my-command
+groupId=com.designpattern.adapter
+artifactId=my-adapter
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
