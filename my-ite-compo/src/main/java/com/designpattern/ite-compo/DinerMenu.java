@@ -6,7 +6,6 @@ public class DinerMenu implements Iterator{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
-    int position = 0;
 
     public DinerMenu(){
         menuItems = new MenuItem[MAX_ITEMS];
@@ -42,14 +41,5 @@ public class DinerMenu implements Iterator{
      */
     public MenuItem[] getMenuItems() {
         return menuItems;
-    }
-    public Object next(){
-        return menuItems[position++];
-    }
-    public boolean hasNext(){
-        if(position >= menuItems.length || items[position] == null){
-            return false;
-        } else {
-            return true;
     }
 }
