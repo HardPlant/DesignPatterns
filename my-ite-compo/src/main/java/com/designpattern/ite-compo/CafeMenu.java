@@ -1,8 +1,9 @@
 package com.designpattern.itecompo;
 
 import java.util.Hashtable;
+import java.util.Iterator;
 
-public class CafeMenu{
+public class CafeMenu implements Menu{
     Hashtable menuItems = new Hashtable();
 
     public CafeMenu(){
@@ -15,7 +16,8 @@ public class CafeMenu{
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.put(menuItem.getName(), menuItem);
     }
-    public Hashtable getItems(){
-        return menuItems;
+
+    public Iterator createIteator(){
+        return menuItems.values().iterator();
     }
 }
