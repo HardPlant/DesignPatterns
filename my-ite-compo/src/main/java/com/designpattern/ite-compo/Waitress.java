@@ -1,5 +1,7 @@
 package com.designpattern.itecompo;
 
+import java.util.Iterator;
+
 public class Waitress{
     Menu pancakeHouseMenu;
     Menu dinerMenu;
