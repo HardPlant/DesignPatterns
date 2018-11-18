@@ -17,7 +17,7 @@ public class CafeMenu implements Menu{
         menuItems.put(menuItem.getName(), menuItem);
     }
 
-    public Iterator createIteator(){
+    public Iterator createIterator(){
         return menuItems.values().iterator();
     }
 }
