@@ -1,5 +1,9 @@
 package com.designpattern.adapter;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -22,6 +26,17 @@ public class App
         
         System.out.println("TurkeyAdapter says..");
         testDuck(turkeyAdapter);
+
+        List<Integer> array = new ArrayList<Integer>();
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        Iterator<Integer> iterator = array.iterator();
+        IteratorEnumeration enumer = new IteratorEnumeration(iterator);
+        System.out.println(enumer.nextElement());
+        System.out.println(enumer.nextElement());
+        System.out.println(enumer.nextElement());
+
     }
     static void testDuck(Duck duck){
         duck.quack();
