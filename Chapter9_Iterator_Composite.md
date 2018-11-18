@@ -1,2 +1,22 @@
 # 이터레이터, 컴포지트 패턴
 
+Array, Stack, List, Hashtable 같은 컬렉션에 객체를 넣는 방법은 다양하다. 각자 장점과 트레이드오프가 있지만, 클라이언트는 이 객체들을 순환하고 싶어한다. 클라이언트는 어떻게 그것을 저장하는지 알지 않고도 순환할 수 있게 할 것이다. 그리고 어떻게 슈퍼컬렉션을 만들어서 한 경계점의 데이터 구조들을 넘나들을 수 있게 하고, 객체 책임에 대해 하나나 두개 정도 배울 수 있다.
+
+### Array를 사용하는 한 클래스, ArrayList를 사용하는 다른 클래스
+
+```java
+public class MenuItem{
+    String name;
+    String description;
+    boolean vegetarian;
+    double price;
+
+    public MenuItem(String name, String description, boolean vegetarian, double price){
+        this.name= name;
+        this.description=description;
+        this.vegetarian=vegetarian;
+        this.price=price;
+    }
+    //getters and setters..
+}
+```
