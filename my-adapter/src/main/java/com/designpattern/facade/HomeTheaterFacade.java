@@ -14,16 +14,29 @@ public class HomeTheaterFacade{
     }
     public void watchMovie(){
         System.out.println("준비..");
-        popconPopper.on();
-        popconPopper.pop();
+        // popconPopper.on();
+        // popconPopper.pop();
         // lights.dim(10);
         // screen.down();
+        //projector.on();
         // projector.wideScreenMode();
-        amp.on();
-        // amp.setDvd(dvd);
-        amp.setSurroundSound();
-        amp.setVolume(5);
+        // amp.on();
+        // // amp.setDvd(dvd);
+        // amp.setSurroundSound();
+        // amp.setVolume(5);
         // dvd.on();
         // dvd.play(movie);
+    }
+    public void endMovie(){
+        System.out.println("준비..");
+        // popconPopper.off();
+        // // lights.dim(10);
+        // // screen.up();
+        // amp.off();
+        // projector.off();
+        // dvd.stop();
+        // dvd.eject();
+        // dvd.off();
+        
     }
 }
