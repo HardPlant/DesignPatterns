@@ -142,3 +142,53 @@ public class EnumerationIterator implements Iterator{
 데코레이터 : 인터페이스를 변경하지 않고 책임을 추가하기 위해
 페케이드 : 인터페이스를 간단하게 만들기 위해
 
+##### 홈 시어터 시스템
+
+Amplifier{tuner, dvdPlayer,CdPlayer;on(),off()}
+Tuner{amplifier;on(),off(),..}
+DvdPlayer{amplifier;on(),off()..}
+CdPlayer{amplifier;on(),off()..}
+Screen{up(),down()}
+PopconPopper{on(),off(),pop()}
+TheaterLights{on(),off(),dim()}
+Projector{dvdPlayer;on(),off(),tvMode(),wideScreenMode()}
+
+영화를 보려면..
+
+* 팝콘기계를 켜고
+* 팝콘을 튀기고
+* 조명을 끄고
+* 스크린을 내리고
+* 프로젝터를 켜고
+* 프로젝트 입력을 DVD에 넣고
+* 프로젝터를 와이드스크린모드로 설정하고
+* 앰프를 켜고
+* 앰프를 DVD 입력으로 하고
+* 앰프 서라운드 사운드를 켜고
+* 앰프 볼륨을 조종하고
+* DVD 플레이어를 켜고
+* DVD 플레이어를 시작함
+
+```java
+popper.on();
+popper.pop();
+lights.dim(10);
+screen.down();
+projector.on();
+projector.setInput(dvd);
+projector.wideScreenMode();
+amp.on();
+amp.setDvd(dvd);
+amp.setSurroundSound();
+amp.setVolume(5);
+dvd.on();
+dvd.play(movie);
+```
+
+영화가 끝나면 꺼야 되고, CD와 라디오에도 대응 안되고, 시스템이 바뀌면 세부 내용을 조정해야 함
+
+페케이드 패턴은 복잡한 서브시스템을 Facade 클래스를 구현해 쉽고 쓸 수 있는 인터페이스를 만듬
+
+HomeTheaterFacade{watchMovie(),endMovie(),listenToCd(),endCd(),listenToRadio(),endRadio()}
+
+페케이드 클래스를 만들어 이런 메서드들을 노출시키고, 홈 시어터 요소를 서브시스템으로 취급해 메서드를 구현하는데 사용함
