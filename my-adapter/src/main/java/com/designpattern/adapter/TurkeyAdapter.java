@@ -15,6 +15,8 @@ public class TurkeyAdapter implements Duck{
     }
     @Override
     public void fly() {
-        
+        for(int i=0;i<5;i++){
+            turkey.fly();
+        }
     }
 }
