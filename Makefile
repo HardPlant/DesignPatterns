@@ -1,5 +1,5 @@
-groupId=com.designpattern.templatemethod
-artifactId=my-templatemethod
+groupId=com.designpattern.itecompo
+artifactId=my-ite-compo
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
