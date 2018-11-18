@@ -4,7 +4,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 
 public class IteratorEnumeration implements Enumeration{
-    Iterator<E> iterator;
+    Iterator iterator;
 
     public IteratorEnumeration(Iterator iterator){
         this.iterator = iterator;
