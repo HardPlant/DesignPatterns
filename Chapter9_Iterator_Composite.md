@@ -13,7 +13,15 @@ public void printMenu(){
 
     DinerMenu dineMenu = new DinerMenu();
     MenuItem[] lunchItems = dinerMenu.getMenuItems();
-    
+
+    for(int i=0;i<breakfastItems.size();i++){
+        Menuitem menuItem = (MenuItem)breakfastItems.get(i);
+        //...print getName(), getPrice(), getDesc()
+    }
+    for(int i=0;i<lunchItems.size();i++){
+        Menuitem menuItem = (MenuItem)lunchItems.get(i);
+        //...print getName(), getPrice(), getDesc()
+    }
 }
 printBreakfastMenu()
 printLunchMenu()
