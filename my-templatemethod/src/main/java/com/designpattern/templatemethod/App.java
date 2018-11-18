@@ -11,5 +11,6 @@ public class App
         Coffee coffee = new Coffee();
         System.out.println("Making Coffee...");
         coffee.prepareRecipe();
+        MyFrame.run();
     }
 }

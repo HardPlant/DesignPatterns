@@ -178,7 +178,8 @@ public static void sort(Object[] a){
 }
 private static void mergeSort(Object src[], Object dest[], int low, int high, int off){
     for(int i=low; i<high; i++){
-        ((Comparable)dest[j-1]).compareTo((Comparable)dest[j]>0; j--){
+        for(int j=i; j>low &&
+        ((Comparable)dest[j-1]).compareTo((Comparable)dest[j])>0; j--){
             swap(dest, j, j-1);
         }
     }
@@ -209,3 +210,35 @@ public class Duck implements Comparable{
 }
 ```
 
+* 인터페이스를 썼지만, 템플릿 메서드랑 하는 짓은 비슷함
+
+위에 있는 템플릿 메서드는 아니지만, 여전히 의도는 같고, 알고리즘을 사용하는 데 `Arrays`를 서브클래싱하지 않아도 되므로 더 유연하고 사용하기 좋게 만든 것임
+
+* 전략 패턴에 가깝지 않나?
+
+구성을 사용하는 것 때문에 전략 패턴에 가깝지만, 전략 패턴은 알고리즘 전체를 구현하고, Arrays는 알고리즘 일부를 미완성으로 남겨놓고 compareTo()를 구현한 객체가 필요함
+
+### 후킹 예제
+
+JFrame이나 다른 Swing 컨테이너는 paint() 메서드를 상속받음, 이 메서드는 아무 일도 하지 않는 훅임
+JFrame의 알고리즘에 그래픽 출력을 넣을 수 있음
+
+```java
+public class MyFrame extends JFrame{
+    public MyFrame(String title){
+        super(title);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.setSize(300,300);
+        this.setVisible(true);
+    }
+    public void paint(Graphics graphics){
+        super.paint(graphics);
+        String msg = "I rule!";
+        graphics.drawString(msg, 100, 100);
+    }
+    public static void main(String[] args){
+        MyFrame myFrame = new MyFrame("HeadFirst");
+    }
+}
+```
