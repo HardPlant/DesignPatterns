@@ -12,7 +12,7 @@ public class PancakeHouseMenuIterator implements com.designpattern.itecompo.Iter
         Iterator iterator = items.iterator();
     }
     public boolean hasNext(){
-        iterator.hasNext();
+        return iterator.hasNext();
     }
     public Object next(){
         return iterator.next();

@@ -1,11 +1,11 @@
 package com.designpattern.itecompo;
 
 public class DinerMenuIterator implements Iterator {
-    MenuItem[] items;
+    MenuItem[] menuItems;
     int position = 0;
 
     public DinerMenuIterator(MenuItem[] items) {
-        this.items = items;
+        this.menuItems = items;
     }
 
     public Object next() {
