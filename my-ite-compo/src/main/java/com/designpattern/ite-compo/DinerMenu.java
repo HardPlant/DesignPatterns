@@ -26,10 +26,7 @@ public class DinerMenu implements Iterator {
         }
     }
 
-    /**
-     * @return the menuItems
-     */
-    public MenuItem[] getMenuItems() {
-        return menuItems;
+    public Iterator createIterator(){
+        return new DinerMenuIterator(menuItems);
     }
 }
