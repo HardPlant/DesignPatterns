@@ -1,3 +1,5 @@
+package com.designpattern.itecompo;
+
 public class MenuItem{
     String name;
     String description;
