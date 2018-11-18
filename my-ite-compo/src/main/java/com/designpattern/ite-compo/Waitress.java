@@ -1,9 +1,9 @@
 package com.designpattern.itecompo;
 
 public class Waitress{
-    PancakeHouseMenu pancakeHouseMenu;
-    DinerMenu dinerMenu;
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dineMenu){
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
+    public Waitress(Menu pancakeHouseMenu, Menu dineMenu){
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dineMenu;
     }
