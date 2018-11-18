@@ -1,0 +1,20 @@
+package com.designpattern.adapter;
+
+import java.util.Enumeration;
+import java.util.Iterator;
+
+public class IteratorEnumeration implements Enumeration{
+    Iterator<E> iterator;
+
+    public IteratorEnumeration(Iterator iterator){
+        this.iterator = iterator;
+    }
+    @Override
+    public Object nextElement() {
+        return iterator.next();
+    }
+    @Override
+    public boolean hasMoreElements() {
+        return iterator.hasNext();
+    }
+}
