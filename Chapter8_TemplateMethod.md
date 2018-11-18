@@ -220,6 +220,8 @@ public class Duck implements Comparable{
 
 ### 후킹 예제
 
+##### JFrame
+
 JFrame이나 다른 Swing 컨테이너는 paint() 메서드를 상속받음, 이 메서드는 아무 일도 하지 않는 훅임
 JFrame의 알고리즘에 그래픽 출력을 넣을 수 있음
 
@@ -242,3 +244,7 @@ public class MyFrame extends JFrame{
     }
 }
 ```
+
+##### 애플릿
+
+init(), start(), stop(), destroy(), paint() 전부 훅임
