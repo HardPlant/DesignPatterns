@@ -5,18 +5,6 @@ Array, Stack, List, Hashtable 같은 컬렉션에 객체를 넣는 방법은 다
 ### Array를 사용하는 한 클래스, ArrayList를 사용하는 다른 클래스
 
 ```java
-public class MenuItem{
-    String name;
-    String description;
-    boolean vegetarian;
-    double price;
 
-    public MenuItem(String name, String description, boolean vegetarian, double price){
-        this.name= name;
-        this.description=description;
-        this.vegetarian=vegetarian;
-        this.price=price;
-    }
-    //getters and setters..
 }
 ```
