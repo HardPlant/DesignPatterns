@@ -6,7 +6,7 @@ import com.designpattern.adapter.Turkey;
 public class TurkeyAdapter implements Duck{
     Turkey turkey;
 
-    public TurkeyAdapter(){
+    public TurkeyAdapter(Turkey turkey){
         this.turkey = turkey;
     }
     @Override
