@@ -13,7 +13,7 @@ public class DinerMenuIterator implements Iterator {
     }
 
     public boolean hasNext() {
-        if (position >= menuItems.length || items[position] == null) {
+        if (position >= menuItems.length || menuItems[position] == null) {
             return false;
         } else {
             return true;

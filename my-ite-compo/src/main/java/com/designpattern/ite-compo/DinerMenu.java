@@ -1,7 +1,5 @@
 package com.designpattern.itecompo;
 
-import java.awt.MenuItem;
-
 public class DinerMenu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
