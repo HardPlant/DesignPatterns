@@ -26,11 +26,11 @@ public class DinerMenuIterator implements Iterator {
         if(position <= 0){
             throw new IllegalStateException("you can't remove an item until you've done at leat one next()");
         }
-        if(list[position-1]!=null){
-            for(int i=position-1; i< (list.length-1);i++){
-                list[i]=list[i+1];
+        if(menuItems[position-1]!=null){
+            for(int i=position-1; i< (menuItems.length-1);i++){
+                menuItems[i]=menuItems[i+1];
             }
-            list[list.length-1] = null;
+            menuItems[menuItems.length-1] = null;
         }
     }
     
