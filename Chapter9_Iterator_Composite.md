@@ -7,7 +7,12 @@ Array, Stack, List, Hashtable 같은 컬렉션에 객체를 넣는 방법은 다
 두 객체를 사용하는 Waitress
 
 ```java
-printMenu(){
+public void printMenu(){
+    PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+    ArrayList breakfaseItems = pancakeHouseMenu.getMenuItems();
+
+    DinerMenu dineMenu = new DinerMenu();
+    MenuItem[] lunchItems = dinerMenu.getMenuItems();
     
 }
 printBreakfastMenu()
