@@ -4,7 +4,14 @@ Array, Stack, List, Hashtable 같은 컬렉션에 객체를 넣는 방법은 다
 
 ### Array를 사용하는 한 클래스, ArrayList를 사용하는 다른 클래스
 
-```java
+두 객체를 사용하는 Waitress
 
+```java
+printMenu(){
+    
 }
+printBreakfastMenu()
+printLunchMenu()
+printVegetraianMenu()
+isItemVegetarian()
 ```
