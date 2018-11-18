@@ -157,3 +157,55 @@ public class CoffeeWithHook extends CaffeineBeverage{
 저레벨 컴포넌트들은 고레벨 컴포넌트의 메서드를 호출하면 안됨
 
 
+* 의존성 역전 원칙과 어떻게 연관되어 있는가?
+
+의존성 역전 법칙은 가능한 한 구체적 클래스의 사용을 피하고 추상을 사용하라고 했고, 할리우드 원칙은 저수준의 컴포넌트가 연산을 후킹할 수 있는 프레임워크나 컴포넌트를 만들 때 사용하고, 거기서 의존성을 만들지 않을 수 있음.
+모두 분리하는 목적을 가지고 있지만,  의존성 역전 원칙은 더 강력하고 일반적인 선언을 만듬.
+할리우드 원칙은 저레벨 구조가 다른 클래스들이 너무 의존적이지 않게 상호운용할 수 있도록 설계할 수 있음
+
+* 저레벨 객체가 고수준 객체의 메서드를 부르는 것을 허용하지 않는가?
+
+저수준 객체는 종종 상속된 메서드를 부르는 일이 있지만, 저수준과 고수준 요소간 명시적인 순환 의존성을 만드는 것을 피할 수 있음
+
+### 소트 예시
+
+자바 Arrays 클래스에는 정렬 메서드가 있음
+
+```java
+public static void sort(Object[] a){
+    Object aux[] = (Object[])a.clone();
+    mergeSort(aux, a, 0, a.length, 0);
+}
+private static void mergeSort(Object src[], Object dest[], int low, int high, int off){
+    for(int i=low; i<high; i++){
+        ((Comparable)dest[j-1]).compareTo((Comparable)dest[j]>0; j--){
+            swap(dest, j, j-1);
+        }
+    }
+    return;
+}
+```
+
+여기서 compareTo()는 Comparable 인터페이스의 메서드인데, 이 메서드를 구현함으로서 템플릿 메서드 패턴으로 만들어진 mergeSort()가 완성됨
+
+##### compareTo()
+
+이 메서드는 두 객체를 비교해서 하나가 적거나, 크거나, 같은지 반환함
+
+```java
+public class Duck implements Comparable{
+    int weight;
+    //...
+    public int compareTo(Object object){
+        Duck otherDuck = (Duck)object;
+        if(this.weight < otherDuck.weight){
+            return -1;
+        } else if(this.weight == otherDuck.weight){
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+}
+```
+
