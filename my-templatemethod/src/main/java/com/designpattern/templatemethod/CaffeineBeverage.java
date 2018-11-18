@@ -1,12 +1,12 @@
 package com.designpattern.templatemethod;
 
-public abstract class CaffeineBaverage{
+public abstract class CaffeineBeverage{
     final void prepareRecipe(){
         boilWater();
         brew();
         pourInCup();
         if(customerWantsCondiments()){
-            addCondiements();
+            addCondiments();
         }
     }
     abstract void brew();

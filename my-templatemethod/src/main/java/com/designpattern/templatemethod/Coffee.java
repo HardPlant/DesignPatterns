@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Coffee extends CaffeineBaverage{
+public class Coffee extends CaffeineBeverage{
     public Coffee(){
 
     }
