@@ -225,3 +225,65 @@ HomeTheaterFacade{watchMovie(),endMovie(),listenToCd(),endCd(),listenToRadio(),e
 
 이 원칙은 많은 클래스들이 강하게 결합되는 것을 막음
 그래서 변경 하나가 연이어져 다른 부분으로 전파되는 것을 막고, 클래스 사이의 의존성을 막아 유지보수하기 비싼 시스템을 만들지 않게 됨
+
+##### 상세
+
+객체 하나를 잡고 해당 객체의 메서드들은 다음에 소속된 메서드들만 호출할 수 있음
+
+* 객체 자체의 메서드
+
+* 메서드의 파라미터에 전달된 객체의 메서드
+
+* 메서드가 생성하거나 인스턴스화한 객체
+
+* 객체의 구성요소(인스턴스 변수)인 객체
+
+다른 호출에서 돌려받은 객체의 메서드를 사용하면, 우리가 직접 아는 객체의 수가 증가하게 됨
+요청한 객체하고만 대화하도록 해야 하며, 다른 객체의 구성요소인 객체들을 알 필요가 없도록 해야 함
+
+* Before
+
+```java
+public float getTemp(){
+    Thermometer thermometer = station.getThermometer();
+    return thermometer.getTemperature();
+}
+```
+
+스테이션에서 온도계를 받아 호출함
+
+* after
+
+```java
+public float getTemp(){
+    return station.getTemperature();
+}
+```
+
+*스테이션에 해당 일을 하는 메서드를 하나 추가*해서 그 결과값을 받아옴
+
+```java
+public class Car{
+    Engine engine;
+//  여기서 생성한 객체 구성요소의 메서드는 호출가능함
+    public Car(){
+
+    }
+    public void start(Key key){
+        Doors doors = new Doors();
+        // 매개변수 객체와 메서드에서 생성한 객체는 호출가능함
+        boolean authorized = key.turns();
+        if(authorized){
+            engine.start(); //메서드 구성요소
+            updateDashboardDisplay();//객체 내 메서드
+            doors.lock();//메서드에서 생성한 객체의 메서드
+        }
+    }
+    public void updateDashBoardDisplay(){
+
+    }
+}
+
+```
+
+* 모든 디자인은
