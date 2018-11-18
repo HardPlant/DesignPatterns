@@ -2,7 +2,7 @@ package com.designpattern.itecompo;
 
 import java.util.ArrayList;
 
-public class PancakeHouseMenu{
+public class PancakeHouseMenu implements Menu{
     ArrayList menuItems;
     public PancakeHouseMenu(){
         menuItems = new ArrayList();
