@@ -1,5 +1,7 @@
 package com.designpattern.itecompo;
 
+import java.util.ArrayList;
+
 public class PancakeHouseMenu{
     ArrayList menuItems;
     public PancakeHouseMenu(){
@@ -30,5 +32,8 @@ public class PancakeHouseMenu{
      */
     public ArrayList getMenuItems() {
         return menuItems;
+    }
+    public Iterator getIterator(){
+        return menuItems.iterator();
     }
 }
