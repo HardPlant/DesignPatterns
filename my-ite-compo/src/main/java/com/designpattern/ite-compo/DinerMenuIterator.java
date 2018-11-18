@@ -1,19 +1,22 @@
 package com.designpattern.itecompo;
 
-public class DinerMenuIterator implements Iterator{
+public class DinerMenuIterator implements Iterator {
     MenuItem[] items;
     int position = 0;
 
-    public DinerMenuIterator(MenuItem[] items){
-        this.items=items;
+    public DinerMenuIterator(MenuItem[] items) {
+        this.items = items;
     }
-    public Object next(){
+
+    public Object next() {
         return menuItems[position++];
     }
-    public boolean hasNext(){
-        if(position >= menuItems.length || items[position] == null){
+
+    public boolean hasNext() {
+        if (position >= menuItems.length || items[position] == null) {
             return false;
         } else {
             return true;
+        }
     }
 }
