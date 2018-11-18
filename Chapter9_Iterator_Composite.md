@@ -18,7 +18,7 @@ public void printMenu(){
         Menuitem menuItem = (MenuItem)breakfastItems.get(i);
         //...print getName(), getPrice(), getDesc()
     }
-    for(int i=0;i<lunchItems.size();i++){
+    for(int i=0;i<lunchItems.length;i++){
         Menuitem menuItem = (MenuItem)lunchItems.get(i);
         //...print getName(), getPrice(), getDesc()
     }
@@ -28,3 +28,26 @@ printLunchMenu()
 printVegetraianMenu()
 isItemVegetarian()
 ```
+
+이런 식으로 루프가 매우 증가함
+변하는 것을 캡슐화해야 하므로, 루프를 캡슐화하는 것이 좋음
+
+여기서 .get(), .size()와 \[i\], .length는 비슷한 것임
+
+Iterator를 만들고, 이와 비슷하게 할 수 있음
+
+```java
+Iterator iterator = breakfastMenu.createIterator();
+while(iterator.hasNext()){
+    MenuItem menuItem = (MenuItem)iterator.next();
+}
+
+Iterator iterator = lunchMenu.createIterator();
+while(iterator.hasNext()){
+    MenuItem menuItem = (MenuItem)iterator.next();
+}
+```
+
+### 이터레이터 패턴
+
+Iterator{hasNext(), next()} 인터페이스를 구현해놓고, 객체 컬렉션에 구현할 수 있음
