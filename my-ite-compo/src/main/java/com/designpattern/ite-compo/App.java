@@ -8,11 +8,34 @@ public class App
 {
     public static void main( String[] args )
     {
-        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-        DinerMenu dinerMenu = new DinerMenu();
-        CafeMenu cafeMenu = new CafeMenu();
+        MenuComponent pancakeHouseMenu = new Menu("PANCAKE", "Breakfast");
+        MenuComponent dinerMenu = new Menu("DINER", "Lunch");
+        MenuComponent cafeMenu = new Menu("CAFE", "Dinner");
+        MenuComponent dissertMenu = new Menu("DESSERT", ":)");
 
-        Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
+        MenuComponent allMenus = new Menu("ALL MENUS", "All combined");
+
+        allMenus.add(pancakeHouseMenu);
+        allMenus.add(dinerMenu);
+        allMenus.add(cafeMenu);
+
+        dinerMenu.add(new MenuItem(
+            "Paster",
+            "Spaghetti",
+            true,
+            3.89
+        ));
+        dinerMenu.add(dessertMenu);
+        dessertMenu.add(new MenuItem(
+            "ApplePie",
+            "Apple",
+            true,
+            3.89
+        ));
+
+        Waitress waitress = new Waitress(allMenus);
+
         waitress.printMenu();
+
     }
 }
