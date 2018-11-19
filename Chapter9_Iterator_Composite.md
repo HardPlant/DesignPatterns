@@ -212,3 +212,7 @@ while(iterator.hasNext()){
 
 ##### 채식메뉴 구현
 
+isVegetarian()을 지원하지 않는 객체를 위해 try/catch를 사용함
+Menu의 isVegetarian()을 false를 반환하게 할 수도 있음
+
+이 구현은 명확성을 위해 구현되서, Menu가 isVegetarian()을 지원하지 않는다는 것을 명확히 함
