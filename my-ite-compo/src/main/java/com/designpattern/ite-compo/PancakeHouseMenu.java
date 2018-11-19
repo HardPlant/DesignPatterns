@@ -3,9 +3,10 @@ package com.designpattern.itecompo;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class PancakeHouseMenu extends Menu{
+public class PancakeHouseMenu extends Menu {
     ArrayList menuItems;
-    public PancakeHouseMenu(){
+
+    public PancakeHouseMenu() {
         // menuItems = new ArrayList();
         // addItem("K&B Pancake",
         // "Description",
@@ -24,17 +25,20 @@ public class PancakeHouseMenu extends Menu{
         // true,
         // 2.99);
     }
-    public void addItem(String name, String description, boolean vegetarian, double price){
+
+    public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.add(menuItem);
     }
+
     /**
      * @return the menuItems
      */
     public ArrayList getMenuItems() {
         return menuItems;
     }
-    public Iterator createIterator(){
+
+    public Iterator createIterator() {
         return menuItems.iterator();
     }
 }

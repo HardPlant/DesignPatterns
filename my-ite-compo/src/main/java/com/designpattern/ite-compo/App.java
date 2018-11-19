@@ -37,6 +37,7 @@ public class App
 
         waitress.printMenu();
         waitress.printVegetarianMenu();
+        
 
     }
 }
