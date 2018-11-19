@@ -1,6 +1,6 @@
 package com.designpattern.itecompo;
 
-public class MenuItem{
+public class MenuItem extends MenuComponent{
     String name;
     String description;
     boolean vegetarian;
@@ -11,6 +11,16 @@ public class MenuItem{
         this.description=description;
         this.vegetarian=vegetarian;
         this.price=price;
+    }
+
+    public void print(){
+        System.out.println("    " + getName());
+        if(isVegetarian()){
+            System.out.print("(v)");
+        }
+        System.out.prinln(", " + getPrice());
+        System.out.prinln("     --" + getDescription());
+
     }
     /**
      * @return the description
@@ -29,6 +39,12 @@ public class MenuItem{
      */
     public double getPrice() {
         return price;
+    }
+    /**
+     * @return the vegetarian
+     */
+    public boolean isVegetarian() {
+        return vegetarian;
     }
     /**
      * @param description the description to set
