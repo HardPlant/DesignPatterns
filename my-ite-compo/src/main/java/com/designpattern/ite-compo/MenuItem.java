@@ -22,6 +22,9 @@ public class MenuItem extends MenuComponent{
         System.out.println("     --" + getDescription());
 
     }
+    public Iterator createIterator(){
+        return new NullIterator();
+    }
     /**
      * @return the description
      */
