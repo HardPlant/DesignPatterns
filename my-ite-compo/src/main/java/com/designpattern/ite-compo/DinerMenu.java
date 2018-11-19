@@ -10,10 +10,10 @@ public class DinerMenu extends Menu{
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
 
-        addItem("BLT1", "Desc", true, 2.99);
-        addItem("BLT2", "Desc", true, 2.99);
-        addItem("BLT3", "Desc", true, 2.99);
-        addItem("BLT4", "Desc", true, 2.99);
+        // addItem("BLT1", "Desc", true, 2.99);
+        // addItem("BLT2", "Desc", true, 2.99);
+        // addItem("BLT3", "Desc", true, 2.99);
+        // addItem("BLT4", "Desc", true, 2.99);
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {

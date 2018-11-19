@@ -7,10 +7,10 @@ public class CafeMenu extends Menu{
     Hashtable menuItems = new Hashtable();
 
     public CafeMenu(){
-        addItem("Cafe1","Desc",true,3.99);
-        addItem("Cafe1","Desc",true,3.99);
-        addItem("Cafe1","Desc",true,3.99);
-        addItem("Cafe1","Desc",true,3.99);
+        // addItem("Cafe1","Desc",true,3.99);
+        // addItem("Cafe1","Desc",true,3.99);
+        // addItem("Cafe1","Desc",true,3.99);
+        // addItem("Cafe1","Desc",true,3.99);
     }
     public void addItem(String name, String description, boolean vegetarian, double price){
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
