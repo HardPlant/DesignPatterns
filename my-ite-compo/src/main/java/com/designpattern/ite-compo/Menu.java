@@ -2,6 +2,6 @@ package com.designpattern.itecompo;
 
 import java.util.Iterator;
 
-public interface Menu{
+public class Menu extends MenuComponent{
     public Iterator createIterator();
 }
