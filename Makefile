@@ -1,5 +1,5 @@
-groupId=com.designpattern.itecompo
-artifactId=my-ite-compo
+groupId=com.designpattern.state
+artifactId=my-state
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
