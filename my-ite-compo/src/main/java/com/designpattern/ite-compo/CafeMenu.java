@@ -3,7 +3,7 @@ package com.designpattern.itecompo;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu{
+public class CafeMenu extends Menu{
     Hashtable menuItems = new Hashtable();
 
     public CafeMenu(){
