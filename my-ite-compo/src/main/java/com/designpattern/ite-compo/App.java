@@ -11,7 +11,7 @@ public class App
         MenuComponent pancakeHouseMenu = new Menu("PANCAKE", "Breakfast");
         MenuComponent dinerMenu = new Menu("DINER", "Lunch");
         MenuComponent cafeMenu = new Menu("CAFE", "Dinner");
-        MenuComponent dissertMenu = new Menu("DESSERT", ":)");
+        MenuComponent dessertMenu = new Menu("DESSERT", ":)");
 
         MenuComponent allMenus = new Menu("ALL MENUS", "All combined");
 

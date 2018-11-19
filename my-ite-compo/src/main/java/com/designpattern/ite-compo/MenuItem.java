@@ -18,8 +18,8 @@ public class MenuItem extends MenuComponent{
         if(isVegetarian()){
             System.out.print("(v)");
         }
-        System.out.prinln(", " + getPrice());
-        System.out.prinln("     --" + getDescription());
+        System.out.println(", " + getPrice());
+        System.out.println("     --" + getDescription());
 
     }
     /**
