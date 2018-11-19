@@ -168,3 +168,11 @@ ArrayList allMenus[]
 컴포지트 패턴은 객체 트리를 만들고 각 객체를 노드로 만듬
 각 구성과 객체 노드에 같은 연산을 적용할 수 있어서, 객체 구성과 각개 객체의 차이를 무시할 수 있음
 
+* 이터레이터와의 관련
+
+메뉴를 재구현하긴 할 건데, 이터레이터가 컴포지트로 바뀌진 않음
+둘은 잘 어울리며, 컴포지트 구현에서 이터레이터를 다양하게 사용할 수 있음
+
+MenuComponent{get{name,desc,isVeget,print},addComponent(),removeComponent(),getChild()}
+    ->MenuItem{...}
+    ->Menu{menuComponents;getName()}
