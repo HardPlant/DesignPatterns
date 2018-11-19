@@ -21,7 +21,17 @@ public class Menu extends MenuComponent{
     public MenuComponent getChild(int i){
         return (MenuComponent)menuComponent.get(i);
     }
-    
+    public void print(){
+        System.out.print("\n"+getName());
+        System.out.println(", " + getDescription());
+        System.out.println("----------------------");
+
+        Iterator iterator = menuComponents.iterator();
+        while(iterator.hasNext()){
+            MenuComponent menuComponent = (MenuComponent)iterator.next();
+            menuComponent.print();
+        }
+    }
     /**
      * @return the name
      */
@@ -34,10 +44,5 @@ public class Menu extends MenuComponent{
     public String getDescription() {
         return description;
     }
-    public void print(){
-        System.out.print("\n"+getName());
-        System.out.println(", " + getDescription());
-        System.out.println("----------------------");
 
-    }
 }

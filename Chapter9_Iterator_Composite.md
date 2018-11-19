@@ -176,3 +176,15 @@ ArrayList allMenus[]
 MenuComponent{get{name,desc,isVeget,print},addComponent(),removeComponent(),getChild()}
     ->MenuItem{...}
     ->Menu{menuComponents;getName()}
+
+##### 컴포지트 print()
+
+print()로 자신을 출력한 뒤,
+
+```java
+Iterator iterator = menuComponents.iterator();
+while(iterator.hasNext()){
+    MenuComponent menuComponent = (MenuComponent)iterator.next();
+    menuComponent.print();
+}
+```
