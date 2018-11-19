@@ -22,7 +22,7 @@ public class Waitress{
     }
     public void printBreakfastMenu(){}
     public void printLunchMenu(){}
-    public void printVegetraianMenu(){
+    public void printVegeterianMenu(){
         Iterator iterator = allMenus.createIterator();
         System.out.println("\nVEGETRAIAN MENU\n----");
         while(iterator.hasNext()){

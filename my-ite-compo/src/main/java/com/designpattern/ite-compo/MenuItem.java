@@ -1,5 +1,7 @@
 package com.designpattern.itecompo;
 
+import java.util.Iterator;
+
 public class MenuItem extends MenuComponent{
     String name;
     String description;
