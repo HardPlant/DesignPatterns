@@ -101,3 +101,38 @@ first(), next(), isDone()으로 된 이터레이터가 있음
 높은 응집도를 가지면 관련된 함수 집합에 대해 설계된 것을 뜻하고, 낮은 응집도를 가지면 관련 없는 함수들이 모여 있다는 뜻임
 
 응집도는 단일 책임 원칙보다 더 일반적인 개념이지만, 밀접하게 관련되어 있음
+
+### 자바 컬렉션 프레임워크
+
+이 프레임워크는 클래스와 인터페이스 집합임 (ArrayList,Vector, LinkedList, Stack, PriorityQueue)
+이 클래스는 java.util.Collection 인터페이스를 구현함
+
+Collection(){
+    add(), addAll(),clear(), contains(), containsAll(), equals(), hashCode(), isEmpty(), iterator(), remove(), removeAll(), retainAll(), size(), toArray()
+}
+
+해시테이블은 간접적으로 이터레이터를 지원함
+key,value의 두 객체 세트를 사용하므로, 해시테이블에서 key()나 value() 하나를 받아 iterator()를 받을 수 있음
+
+##### for in
+
+Java 5부터 쓸 수 있음, 명시적 이터레이터 생성 없이 배열, 컬렉션을 이터레이트할 수 있음
+
+```java
+for(Object obj:colletion){
+
+}
+```
+
+ArrayList를 사용하려면
+
+```java
+ArrayList items = new ArrayList();
+items.add(new MenuItem("",""));
+items.add(new MenuItem("",""));
+for (MenuItem item:items){
+    System.out.println(".."+items);
+}
+```
+
+* for/in 타입 안전을 보장하려면 제네릭을 사용해야 함
