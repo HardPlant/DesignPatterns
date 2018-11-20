@@ -1,5 +1,5 @@
-groupId=com.designpattern.state
-artifactId=my-state
+groupId=com.designpattern.proxy
+artifactId=my-proxy
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
