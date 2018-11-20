@@ -17,34 +17,15 @@ public class GumballMachine {
     }
 
     public void insertQuarter() {
-        if (state == HAS_QUARTER) {
-        } else if (state == SOLD_OUT) {
-        } else if (state == SOLD) {
-        } else if (state == NO_QUARTER) {
-            state = HAS_QUARTER;
-        }
+        state.insertQuarter();
     }
     public void ejectQuarter() {
-        if (state == HAS_QUARTER) {
-            state = NO_QUARTER;
-        } else if (state == NO_QUARTER) {
-        } else if (state == SOLD) {
-        } else if (state == SOLD_OUT) {
-        }
+        state.ejectQuarter();
     }
     public void turnCrank(){
-        if (state == SOLD) {
-        } else if (state == SOLD_OUT) {
-        } else if (state == NO_QUARTER) {
-        } else if (state == HAS_QUARTER) {
-        }
+        state.turnCrank();
     }
     public void dispense(){
-        if (state == SOLD) {
-            }
-        } else if (state == NO_QUARTER) {
-        } else if (state == HAS_QUARTER) {
-        } else if (state == SOLD_OUT) {
-        }
+        state.dispense();
     }
 }
