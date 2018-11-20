@@ -174,3 +174,8 @@ public class MyRemoteClient{
 
 * 클라이언트에게 스텁 클래스를 줘야 함(`MyRemote.class`, `MyServiceImpl_Stub.class`)
 
+* **RMI는 Deprecated됨**
+
+어쨌든 각 객체에 대한 Remote 인터페이스를 만들어서 해당 객체를 조작함
+
+### 프록시 패턴
