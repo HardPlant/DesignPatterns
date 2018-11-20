@@ -44,6 +44,12 @@ public class GumballMachine {
             count = count - 1;
         }
     }
+    void refill(int count){
+        if(getState() == this.getSoldOutState()){
+            this.count += count;
+            this.state = this.getNoQuarterState();
+        }
+    }
     /**
      * @return the hasQuarterState
      */
