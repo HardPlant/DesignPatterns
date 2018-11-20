@@ -24,8 +24,18 @@ public class GumballMachine {
     }
     public void turnCrank(){
         state.turnCrank();
+        state.dispense();
     }
     public void dispense(){
         state.dispense();
+    }
+    void setState(State state){
+        this.state = state;
+    }
+    void releaseBall(){
+        System.out.println("A gumball!");
+        if(count !=0){
+            count = count - 1;
+        }
     }
 }
