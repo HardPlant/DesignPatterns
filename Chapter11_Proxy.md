@@ -64,12 +64,18 @@ public interface MyRetmoe extends Remote{
 
 ```java
 public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
+    public MyRemoteImpl() throws RemoteException{
+        
+    }
     public String sayHello(){
         return "Server says, 'Hey'";
     }
 }
 ```
 
+* UnicastRemote 확장
 
+생성자가 RemoteException 예외를 던짐
+인스턴스화됬을 떄 상위 생성자는 무조건 호출되므로, 상위 생성자가 예외를 던진다면 하위 생성자도 예외를 던져야함
 
 
