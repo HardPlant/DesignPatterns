@@ -275,5 +275,40 @@ proxy.setHotOrNotRating(9);
 
 return method.invoke(person, args);
 
-##### 구현하기
+```java
+    public Object invoke(Object proxy, Method method, Object[] args) throws IllegalAccessException {
+        try{
+            if(method.getName().startsWith("get")){
+                throw new IllegalAccessException();
+            } else if(method.getName().equals("setHotOrNotRating")){
+                return method.invoke(person, args);
+            } else if(method.getName().equals("set")){
+                throw new IllegalAccessException();
+            }
+        } catch (InvocationTargetException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+```
 
+###### Proxy 클래스 생성 및 인스턴스화
+
+동적으로 프록시를 생성하고 인스턴스화하게 둠
+
+```java
+PersonBean getOwnerProxy(PersonBean person){
+    return (PersonBean)Proxy.newProxyInstance(
+        person.getClass().getClassLoader(),
+        person.getClass().getInterfaces(),
+        new OwnerInvocationHandler(person)
+    );
+}
+PersonBean getNonOwnerProxy(PersonBean person){
+    return (PersonBean)Proxy.newProxyInstance(
+        person.getClass().getClassLoader(),// Subject 클래스로더
+        person.getClass().getInterfaces(),// 구현이 필요한 인터페이스 집합
+        new NonOwnerInvocationHandler(person)
+    );
+}
+```
