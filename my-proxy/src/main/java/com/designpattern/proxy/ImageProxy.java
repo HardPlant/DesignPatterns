@@ -41,6 +41,7 @@ class ImageProxy implements Icon{
                     public void run() {
                         try{
                             imageIcon = new ImageIcon(imageURL, "CD Cover");
+                            //
                             c.repaint();
                         } catch(Exception e){
                             e.printStackTrace();
