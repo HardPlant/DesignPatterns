@@ -42,4 +42,15 @@
 
 `java MyServiceImpl`
 
-### 
+### Remote Interface 만들기
+
+* java.rmi.Remote 확장
+
+* Remote
+
+```
+public interface MyRetmoe extends Remote{
+    
+}
+```
+
