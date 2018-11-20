@@ -18,3 +18,6 @@ GooseAdapter 추가
 
 ##### Duck 클래스 바꾸지 않고 Quack에 카운트 기능 추가하기
 
+static int count를 추가하는 데코레이터
+
+##### 이미 데코레이트된 객체 반환하기
