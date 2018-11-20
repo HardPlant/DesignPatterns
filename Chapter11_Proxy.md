@@ -164,4 +164,13 @@ public class MyRemoteClient{
 }
 ```
 
+여기서 클라이언트는 동적 클래스 다운로드를 실행해 클래스를 얻음
+
+##### 주의사항
+
+* `rmiregistry`를 실행해야 함
+
+* 매개변수는 원시형이거나 Serializable을 구현해야 함
+
+* 클라이언트에게 스텁 클래스를 줘야 함(`MyRemote.class`, `MyServiceImpl_Stub.class`)
 
