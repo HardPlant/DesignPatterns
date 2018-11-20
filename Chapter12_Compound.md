@@ -13,3 +13,8 @@ MVC 패턴은 컴파운드 패턴 중 하나임
 * DuckSimulator 만들기
 
 ##### 거위 추가하기
+
+GooseAdapter 추가
+
+##### Duck 클래스 바꾸지 않고 Quack에 카운트 기능 추가하기
+
