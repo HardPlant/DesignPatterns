@@ -62,3 +62,11 @@ public void insertQuarter(){
 * 기계 상태를 구현하는 모든 state를 State 클래스로 구현함
 
 * 모든 조건절을 없애고 State 클래스에게 일을 하도록 시킴
+
+```
+State
+    ..>SoldState
+    ..>SoldOutState
+    ..>NoQuarterState
+    ..>HasQuarterState
+```
