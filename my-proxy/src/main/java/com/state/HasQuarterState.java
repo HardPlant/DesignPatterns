@@ -6,7 +6,7 @@ import com.designpattern.state.GumballMachine;
 
 public class HasQuarterState implements State{
     Random randomWinner = new Random(System.currentTimeMillis());
-    GumballMachine gumballMachine;
+    transient GumballMachine gumballMachine;
     public HasQuarterState(GumballMachine machine){
         this.gumballMachine = machine;
     }

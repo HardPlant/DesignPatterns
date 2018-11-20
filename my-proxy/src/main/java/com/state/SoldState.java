@@ -3,7 +3,7 @@ package com.designpattern.state;
 import com.designpattern.state.GumballMachine;
 
 public class SoldState implements State{
-    GumballMachine gumballMachine;
+    transient GumballMachine gumballMachine;
     public SoldState(GumballMachine machine){
         this.gumballMachine = machine;
     }

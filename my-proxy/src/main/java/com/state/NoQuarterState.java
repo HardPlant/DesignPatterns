@@ -3,7 +3,7 @@ package com.designpattern.state;
 import com.designpattern.state.GumballMachine;
 
 public class NoQuarterState implements State{
-    GumballMachine gumballMachine;
+    transient GumballMachine gumballMachine;
 
     public NoQuarterState(GumballMachine machine){
         this.gumballMachine = machine;
