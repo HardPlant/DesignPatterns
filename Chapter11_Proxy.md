@@ -312,3 +312,33 @@ PersonBean getNonOwnerProxy(PersonBean person){
     );
 }
 ```
+
+이후 PersonBean을 얻을 때 해당 메서드를 사용하면 됨
+
+### 다른 프록시들
+
+* Firewall Proxy
+
+네트워크 자원의 접근제어
+
+* Smart Reference Proxy
+
+참조될 떄마다 추가 행동을 함
+
+* Caching Proxy
+
+비싼 연산 결과를 저장하는 임시 저장소
+여러 클라이언트를 공유할 수 있음
+
+* 동기화 프록시
+
+다중쓰레드의 주제에 안전한 접근을 제공함
+
+* 복잡성 숨기기 프록시
+
+페케이드 프록시라고도 불림
+프록시 접근제어도 담당함
+
+* Copy-on-Write 프록시
+
+객체 복사를 클라이언트가 필요할 때까지 지연시킴
