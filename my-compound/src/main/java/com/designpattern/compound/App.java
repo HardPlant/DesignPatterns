@@ -9,13 +9,14 @@ public class App
     public static void main( String[] args )
     {
         App app = new App();
-        app.simulate();
+        AbstractDuckFactory duckFactory = new DuckFactoryWithAdapter();
+        app.simulate(duckFactory);
     }
-    void simulate(){
-        Quackable mallardDuck = new CountDecorator(new MallardDuck());
-        Quackable redheadDuck = new CountDecorator(new RedHeadDuck());
-        Quackable duckCall = new CountDecorator(new DuckCall());
-        Quackable rubberDuck = new CountDecorator(new RubberDuck());
+    void simulate(AbstractDuckFactory factory){
+        Quackable mallardDuck = factory.createMallardDuck();
+        Quackable redheadDuck = factory.createRedheadDuck();
+        Quackable duckCall = factory.createDuckCall();
+        Quackable rubberDuck = factory.createRubberDuck();
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator");
