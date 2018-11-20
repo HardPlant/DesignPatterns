@@ -1,4 +1,4 @@
-package com.designpattern.state;
+package com.designpattern.proxy;
 
 public class GumballMachine {
     // State soldOutState;
