@@ -42,13 +42,13 @@
 
 `java MyServiceImpl`
 
-### Remote Interface 만들기
+##### Remote Interface 만들기
 
 * java.rmi.Remote 확장
 
 * RemoteException 처리
 
-
+* 모든 매개변수가 원시형이거나 Serializable이어야 함
 
 ```java
 import java.rmi.*;
@@ -57,4 +57,19 @@ public interface MyRetmoe extends Remote{
     public String sayHello() throws RemoteException;
 }
 ```
+
+##### Remote Implementation 만들기
+
+* Remote Interface 구현
+
+```java
+public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
+    public String sayHello(){
+        return "Server says, 'Hey'";
+    }
+}
+```
+
+
+
 
