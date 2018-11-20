@@ -200,4 +200,13 @@ Icon:Interface
 ImageProxy는 먼저 이미지아이콘을 불러와서 networkURL에서 로드하기 시작함
 로드되는 동안 `Loading CD Cover..`를 표시함
 이미지가 로드되면 ImageProxy는 모든 메서드 호출을 이미지 아이콘에게 위임함(paintIcon(),getWidth(), getHeight()))
-새 이미지를 요청하면, 새 프록시를 만들음
+새 이미지를 요청하면, 새 프록시를 만듬
+
+* 할 만한 것
+
+메뉴로 다른 CD 커버를 로드하기
+loading 메시지가 뜰 때 윈도우를 리사이즈하기, proxy는 스윙 윈도우와 관계없이 로드를 처리하고 있음
+새 CD를 추가하기
+
+* 
+

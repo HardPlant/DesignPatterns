@@ -8,10 +8,13 @@ import com.designpattern.state.GumballMachine;
  */
 public class App 
 {
-    public static void main( String[] args )
+    ImageComponent imageComponent;
+    public static void main( String[] args ) throws Exception
     {
-        GumballMachine machine = new GumballMachine(5, "nowhere");
-        GumballMonitor monitor = new GumballMonitor(machine);
-        monitor.report();
+    }
+    public ImageProxyTestDrive() throws Exception{
+        Icon icom = new ImageProxy(initialURL);
+        imageComponent = new ImageComponent(icon);
+        frame.getContentPane().add(imageComponent);
     }
 }
