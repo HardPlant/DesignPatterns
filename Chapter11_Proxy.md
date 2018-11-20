@@ -46,11 +46,15 @@
 
 * java.rmi.Remote 확장
 
-* Remote
+* RemoteException 처리
 
-```
+
+
+```java
+import java.rmi.*;
+
 public interface MyRetmoe extends Remote{
-    
+    public String sayHello() throws RemoteException;
 }
 ```
 
