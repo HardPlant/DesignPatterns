@@ -1,8 +1,8 @@
 package com.designpattern.compound;
 
-public class HonkQuack implements Quackable{
+public class GooseAdapter implements Quackable{
     Goose goose;
-    public HonkQuack(Goose goose){
+    public GooseAdapter(Goose goose){
         this.goose = goose;
     }
     @Override
