@@ -38,4 +38,34 @@ public class GumballMachine {
             count = count - 1;
         }
     }
+    /**
+     * @return the hasQuarterState
+     */
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+    /**
+     * @return the noQuarterState
+     */
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
+    /**
+     * @return the soldOutState
+     */
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+    /**
+     * @return the soldState
+     */
+    public State getSoldState() {
+        return soldState;
+    }
+    /**
+     * @return the state
+     */
+    public State getState() {
+        return state;
+    }
 }
