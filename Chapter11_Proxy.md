@@ -53,7 +53,7 @@
 ```java
 import java.rmi.*;
 
-public interface MyRetmoe extends Remote{
+public interface MyRemote extends Remote{
     public String sayHello() throws RemoteException;
 }
 ```
