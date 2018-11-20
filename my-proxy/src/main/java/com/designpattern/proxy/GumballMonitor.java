@@ -9,8 +9,7 @@ public class GumballMonitor{
     }
     public void report(){
         System.out.println("Gummball Machine: "+machine.getLocation());
-        System.out.println("Current: "+machine.getLocation());
-        System.out.println("Gummball Machine: "+machine.getLocation());
-
+        System.out.println("Current Location: "+machine.getCount()+" gumballs");
+        System.out.println("Gummball State: " +machine.getState());
     }
 }
