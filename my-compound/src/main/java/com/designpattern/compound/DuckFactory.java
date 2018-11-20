@@ -2,7 +2,7 @@ package com.designpattern.compound;
 
 import com.designpattern.compound.Quackable;
 
-public class DuckFactory implements AbstractDuckFactory {
+public class DuckFactory extends AbstractDuckFactory {
     public Quackable createMallardDuck() {
         return new MallardDuck();
     }

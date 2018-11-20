@@ -2,7 +2,7 @@ package com.designpattern.compound;
 
 import com.designpattern.compound.Quackable;
 
-public class DuckFactoryWithAdapter implements AbstractDuckFactory {
+public class DuckFactoryWithAdapter extends AbstractDuckFactory {
     public Quackable createMallardDuck() {
         return new CountDecorator(new MallardDuck());
     }
