@@ -23,12 +23,12 @@ public class SoldState implements State{
     }
     @Override
     public void dispense() {
-        System.out.println("A gumball come rolling out the slot");
-        count = count -1;
-        if(count == 0){
+        gumballMachine.releaseBall();
+        if(gumballMachine.getCount() > 0){
+            gumballMachine.setState(gumballMachine.getNoQuarterState());
+        } else{
             System.out.println("Oops, out of gumballs!");
-            state = SOLD_OUT;
-        } else {
-            state = NO_QUARTER;
+            gumballMachine.setState(gumballMachine.getSoldOutState());
+        }
     }
 }
