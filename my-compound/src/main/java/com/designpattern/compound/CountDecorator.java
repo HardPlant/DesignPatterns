@@ -4,11 +4,10 @@ import com.designpattern.compound.Quackable;
 
 public class CountDecorator implements Quackable{
     Quackable quackable;
-    int numberOfQuacks;
+    static int numberOfQuacks = 0;
     
     public CountDecorator(Quackable quackable){
         this.quackable = quackable;
-        numberOfQuacks = 0;
     }
 
     @Override
@@ -19,7 +18,7 @@ public class CountDecorator implements Quackable{
     /**
      * @return the numberOfQuacks
      */
-    public int getCount() {
+    public static int getCount() {
         return numberOfQuacks;
     }
 }
