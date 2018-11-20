@@ -12,10 +12,10 @@ public class App
 
         System.out.println(gumballMachine);
         gumballMachine.insertQuarter();
-        gumballMachine.turnQuarter();
+        gumballMachine.turnCrank();
         
         System.out.println(gumballMachine);
-        
+
         gumballMachine.insertQuarter();
         gumballMachine.ejectQuarter();
         gumballMachine.turnQuarter();
