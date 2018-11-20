@@ -10,9 +10,13 @@ public class GumballMachine {
     int count = 0;
 
     public GumballMachine(int count) {
+        soldOutState = new SoldOutState(this);
+        noQuarterState = new NoQuarterState(this);
+        hasQuarterState = new HasQuarterState(this);
+        soldState = new SoldState(this);
         this.count = count;
         if (count > 0) {
-            state = NO_QUARTER;
+            state = noQuarterState;
         }
     }
 
