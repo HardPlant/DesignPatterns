@@ -140,3 +140,28 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
 }
 ```
 
+그러면 클라이언트는
+
+```java
+MyRemote service = (MyRemote)Naming.lookup("rmi://127.0.0.1/RemoteHello");
+```
+로 스텁 오브젝트를 받을 수 있음
+
+##### 클라이언트 코드
+
+```java
+public class MyRemoteClient{
+    public static void main(String[] args){
+        new MyRemoteClient().go();
+    }
+    public void go(){
+        try{
+            MyRemote service = (MyRemote)Naming.lookup("rmi://127.0.0.1/RemoteHello");
+            String s = service.sayHello();
+            System.out.println(s);
+        } catch(Exception e){e.printStackTrace();}
+    }
+}
+```
+
+
