@@ -20,7 +20,7 @@ public class App
     public void proxyDrive(){
         PersonBean joe;
         PersonBean ownerProxy = getOwnerProxy(joe);
-        System.ount.println("Name is" + ownerProxy.getName());
+        System.out.println("Name is" + ownerProxy.getName());
     }
 
     PersonBean getOwnerProxy(PersonBean person){
