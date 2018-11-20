@@ -30,7 +30,7 @@
 
 * Remote Implementation 만들기
 
-* rmic를 stubs, skeletons로 만들기
+* rmic로 stubs, skeletons로 만들기
 
 `rmic MyServiceImpl`
 
@@ -89,3 +89,54 @@ try{
     Naming.rebind("RemoteHello", service);
 }catch (Exception ex){/*...*/}
 ```
+
+##### rmic를 stubs, skeletons로 만들기
+
+Remote 인터페이스가 아닌 Remote 구현 클래스를 등록
+_Stub, _Skel 네이밍 컨벤션을 가지고 있음
+
+`rmic MyRemoteImpl`
+
+##### rmiregistry 실행
+
+클래스 파일이 있는 곳에서 `rmiregistry` 실행
+
+##### 서비스 시작
+
+`java MyRemoteImpl`
+
+##### 서버 사이드 코드
+
+* 인터페이스
+
+```java
+import java.rmi.*;
+
+public interface MyRemote extends Remote{
+    public String sayHello() throws RemoteException;
+}
+```
+
+* 구현
+
+```java
+
+public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
+    public MyRemoteImpl() throws RemoteException{
+
+    }
+    public String sayHello(){
+        return "Server says, 'Hey'";
+    }
+    oublic MyRemoteImpl() throws RemoteException{}
+    public static void main(String[] args){
+        try{
+            MyRemote service = new MyRemoteImpl();
+            Naming.rebind("RemoteHello", service);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+```
+
