@@ -2,9 +2,9 @@ package com.designpattern.compound;
 
 import com.designpattern.compound.Quackable;
 
-public class RubberDuck implements Quackable{
+public class DuckCall implements Quackable{
     @Override
     public void quack() {
-        System.out.println("Quack");
+        System.out.println("Kwak");
     }
 }
