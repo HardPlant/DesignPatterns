@@ -7,7 +7,7 @@ public interface PersonBean{
     int getHotOrNotRating();
 
     void setName(String name);
-    void setGender(StringgGender);
+    void setGender(String Gender);
     void setInterests(String interest);
     void setHotOrNotRating(int rating);
 }
