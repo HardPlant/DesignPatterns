@@ -1,6 +1,6 @@
 package com.designpattern.state;
 
-public interface State{
+public interface State extends Serializable{
     public void insertQuarter();
     public void ejectQuarter();
     public void turnCrank();
