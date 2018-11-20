@@ -18,7 +18,7 @@ public class App
 
         gumballMachine.insertQuarter();
         gumballMachine.ejectQuarter();
-        gumballMachine.turnQuarter();
+        gumballMachine.turnCrank();
         
         System.out.println(gumballMachine);
 
