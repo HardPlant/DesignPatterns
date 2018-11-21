@@ -18,17 +18,37 @@ public class App
         Quackable duckCall = factory.createDuckCall();
         Quackable rubberDuck = factory.createRubberDuck();
         Quackable gooseDuck = new GooseAdapter(new Goose());
-        Flock flock = new Flock();
-        flock.add(mallardDuck);
-        flock.add(redheadDuck);
-        flock.add(duckCall);
-        flock.add(rubberDuck);
-        flock.add(gooseDuck);
+        
+        Flock flockOfDucks = new Flock();
+        flockOfDucks.add(mallardDuck);
+        flockOfDucks.add(redheadDuck);
+        flockOfDucks.add(duckCall);
+        flockOfDucks.add(rubberDuck);
+        flockOfDucks.add(gooseDuck);
 
+        Flock flockOfMallards = new Flock();
+
+        Quackable mallardDuck1 = factory.createMallardDuck();
+        Quackable mallardDuck2 = factory.createMallardDuck();
+        Quackable mallardDuck3 = factory.createMallardDuck();
+        Quackable mallardDuck4 = factory.createMallardDuck();
+        
+        flockOfMallards.add(mallardDuck1);
+        flockOfMallards.add(mallardDuck2);
+        flockOfMallards.add(mallardDuck3);
+        flockOfMallards.add(mallardDuck4);
         System.out.println("\nDuck Simulator");
-
-        flock.quack();
+        
+        simulate(flockOfDucks);
+        
+        System.out.println("\nHello Mallard");
+        simulate(flockOfMallards);
 
         System.out.println("Quacks: " + CountDecorator.getCount());
+    
+        
+    }
+    void simulate(Quackable duck){
+        duck.quack();
     }
 }
