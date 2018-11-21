@@ -38,6 +38,9 @@ public class App
         flockOfMallards.add(mallardDuck3);
         flockOfMallards.add(mallardDuck4);
         System.out.println("\nDuck Simulator");
+
+        Quackologist quackologist = new Quackologist();
+        flockOfDucks.registerObserver(quackologist);
         
         simulate(flockOfDucks);
         
@@ -46,7 +49,6 @@ public class App
 
         System.out.println("Quacks: " + CountDecorator.getCount());
     
-        
     }
     void simulate(Quackable duck){
         duck.quack();

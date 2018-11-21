@@ -7,6 +7,17 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
+            "mainClass": "com.designpattern.compound.App",
+            "args": "",
+            "projectName": "my-compound"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
             "mainClass": "com.mycompany.designpattern.App",
             "args": "",
             "projectName": "my-decorator"
