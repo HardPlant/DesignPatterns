@@ -7,6 +7,12 @@ import com.designpattern.compound.Quackable;
 
 public class Flock implements Quackable{
     ArrayList quackers = new ArrayList();
+    Observable observable;
+    
+    public Flock(){
+        observable = new Observable(this);
+    }
+
     public void add(Quackable quacker){
         quackers.add(quacker);
     }
@@ -16,5 +22,11 @@ public class Flock implements Quackable{
             Quackable quacker = (Quackable)iterator.next();
             quacker.quack();
         }
+    }
+    public void notifyObservers() {
+        observable.notifyObservers();
+    }
+    public void registerObserver(Observer observer) {
+        observable.registerObserver(observer);
     }
 }

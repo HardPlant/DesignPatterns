@@ -10,7 +10,6 @@ public class CountDecorator implements Quackable{
         this.quackable = quackable;
     }
 
-    @Override
     public void quack() {
         numberOfQuacks++;
         this.quackable.quack();
@@ -20,5 +19,11 @@ public class CountDecorator implements Quackable{
      */
     public static int getCount() {
         return numberOfQuacks;
+    }
+    public void notifyObservers() {
+        
+    }
+    public void registerObserver(Observer observer) {
+        
     }
 }
