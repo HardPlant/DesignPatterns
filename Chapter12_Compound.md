@@ -85,3 +85,11 @@ View의 앞 부분 paint()는 모든 창에 있음
 
 ### DJ Java
 
+##### BeatModelInterface 구현
+
+Beat, BPM 옵저버가 볼 수 있는 주제임
+
+##### DJ Java View
+
+
+
