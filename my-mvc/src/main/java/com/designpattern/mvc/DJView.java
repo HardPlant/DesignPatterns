@@ -55,10 +55,9 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
         bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
         beatBar = new BeatBar();
 
-        bpmPanel = new JPanel(new GridLayout(1,2));
+        bpmPanel = new JPanel(new GridLayout(2,1));
         bpmPanel.add(beatBar);
         bpmPanel.add(bpmOutputLabel);
-        viewPanel.add(bpmPanel);
         viewPanel.add(bpmPanel);
         viewFrame.getContentPane().add(viewPanel, BorderLayout.CENTER);
         viewFrame.pack();
@@ -77,13 +76,12 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     }
 
     public void createControls(){
-        JFrame.setDefaultLookAndFeelDecorated(true);
         controlFrame = new JFrame("Control");
         controlFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         controlFrame.setSize(new Dimension(100,80));
 
-        controlPanel = new JPanel(new GridLayout(1, 2));
-        insideControlPanel = new JPanel(new GridLayout(1, 2));
+        controlPanel = new JPanel(new GridLayout(2, 1));
+        insideControlPanel = new JPanel(new GridLayout(3, 1));
 
         menuBar = new JMenuBar();
         menu = new JMenu("DJ Control");
@@ -110,21 +108,26 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
         });
         menu.add(exit);
         menuBar.add(menu);
+        controlPanel.add(menuBar);
 
+        JPanel enterPanel = new JPanel(new GridLayout(3,1));
         bpmTextField = new JTextField(2);
         bpmLabel = new JLabel("Enter BPM:", SwingConstants.RIGHT);
+        enterPanel.add(bpmLabel);
+        enterPanel.add(bpmTextField);
+
         setBPMButton = new JButton("Set");
         setBPMButton.setSize(new Dimension(10,40));
+        
+        JPanel buttonPanel = new JPanel(new GridLayout(1,2));
         increaseBPMButton = new JButton(">>");
         decreaseBPMButton = new JButton("<<");
         increaseBPMButton.addActionListener(this);
         decreaseBPMButton.addActionListener(this);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(1,2));
         buttonPanel.add(decreaseBPMButton);
         buttonPanel.add(increaseBPMButton);
 
-        JPanel enterPanel = new JPanel(new GridLayout(3,1));
         insideControlPanel.add(enterPanel);
         insideControlPanel.add(setBPMButton);
         insideControlPanel.add(buttonPanel);
