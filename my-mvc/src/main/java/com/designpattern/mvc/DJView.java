@@ -44,5 +44,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
         beatBar.setValue(100);
     }
 
-    
+    public void createControls(){
+        
+    }
 }
