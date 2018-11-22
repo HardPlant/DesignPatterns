@@ -18,4 +18,8 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
         model.registerObserver((BeatObserver)this);
         model.registerObserver((BPMObserver)this);
     }
+
+    public void createView(){
+
+    }
 }
