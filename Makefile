@@ -1,5 +1,5 @@
-groupId=com.designpattern.compound
-artifactId=my-compound
+groupId=com.designpattern.mvc
+artifactId=my-mvc
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
