@@ -30,4 +30,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
             bpmOutputLabel.setText("Current BPM: " + model.getBPM());
         }
     }
+    public void updateBeat(){
+        beatBar.setValue(100);
+    }
 }
