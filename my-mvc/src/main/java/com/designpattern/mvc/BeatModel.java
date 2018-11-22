@@ -1,6 +1,6 @@
-package com.designpattern.compound;
+package com.designpattern.mvc;
 
-import com.designpattern.compound.BeatModelInterface;
+import com.designpattern.mvc.BeatModelInterface;
 
 public class BeatModel implements BeatModelInterface, MetaEventListener{
     Sequencer sequencer;

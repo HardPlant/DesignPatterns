@@ -1,4 +1,4 @@
-package com.designpattern.compound;
+package com.designpattern.mvc;
 
 public interface BeatModelInterface{
     void initialize();
