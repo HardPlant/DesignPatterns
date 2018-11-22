@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.sound.midi.MetaEventListener;
 import javax.sound.midi.MetaMessage;
+import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
 import javax.sound.midi.Track;
@@ -82,4 +83,17 @@ public class BeatModel implements BeatModelInterface, MetaEventListener{
             setBPM(getBPM());
         }
     }
+    public void setUpMidi(){
+        try{
+            sequencer = MidiSystem.getSequencer();
+            sequencer.open();
+            sequencer.addMetaEventListener(this);
+            sequence = new Sequence(Sequence.PPQ, 4);
+            track = sequence.createTrack();
+            sequencer.setTempoInBPM(getBPM());
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
 }
