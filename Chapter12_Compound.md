@@ -89,7 +89,12 @@ View의 앞 부분 paint()는 모든 창에 있음
 
 Beat, BPM 옵저버가 볼 수 있는 주제임
 
-##### DJ Java View
+##### View
 
+DJ 뷰는 BPMObserver, BeatObserver의 정보를 보여줌
+
+BPM을 변경할 수 있음
+
+뷰에 대해 아무런 가정을 하지 않고, 옵저버 패턴을 이용해 만들어짐
 
 
