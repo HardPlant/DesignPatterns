@@ -2,10 +2,13 @@ package com.designpattern.mvc;
 
 import java.awt.event.ActionEvent;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class DJView implements ActionListener, BeatObserver, BPMObserver{
     BeatModelInterface model;
@@ -21,7 +24,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     JButton increaseBPMButton;
     JButton decreaseBPMButton;
     JMenuBar menuBar;
-    JMenu menu;
+    JMenuBar menu;
     JMenuItem startMenuItem;
     JMenuItem stopMenuItem;
 
@@ -62,4 +65,6 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     public void disableStartMenuItem(){
         startMenuItem.setEnabled(false);
     }
+
+
 }
