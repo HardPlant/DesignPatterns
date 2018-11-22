@@ -74,4 +74,12 @@ public class BeatModel implements BeatModelInterface, MetaEventListener{
             bpmObservers.remove(i);
         }
     }
+
+    public void meta(MetaMessage message) {
+        if (message.getType() == 47){
+            beatEvent();
+            sequencer.start();
+            setBPM(getBPM());
+        }
+    }
 }
