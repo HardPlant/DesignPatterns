@@ -18,4 +18,9 @@ public class BeatController implements ControllerInterface{
         view.disableStartMenuItem();
         view.enableStopMenuItem();
     }
+    public void stop() {
+        model.off();
+        view.enableStartMenuItem();
+        view.disableStopMenuItem();
+    }
 }
