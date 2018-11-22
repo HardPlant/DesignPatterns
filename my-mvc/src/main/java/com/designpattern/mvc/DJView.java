@@ -66,5 +66,14 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
         startMenuItem.setEnabled(false);
     }
 
-
+    public void actionPerformed(ActionEvent event){
+        if(event.getSource() == setBPMButton){
+            int bpm = Integer.parseInt(bpmTextField.getText());
+            controller.setBPM(bpm);
+        } else if (event.getSource() == increaseBPMButton){
+            controller.increaseBPM();       
+        } else if (event.getSource() == decreaseBPMButton){
+            controller.decreaseBPM();
+        }
+    }
 }
