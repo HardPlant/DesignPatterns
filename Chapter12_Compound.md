@@ -38,3 +38,50 @@ static int count를 추가하는 데코레이터
 ### 오리 상태 관리
 
 옵저버 패턴
+
+### 회고
+
+* Quackable로 시작
+
+* goose가 Quackable로 행동하고 싶어서 GooseAdapter를 만듬
+
+* Quackologist가 quack을 세고 싶어서 CountingDecotrator를 만듬
+
+* CountingDecorator를 추가해주는 AbstractDuckFactory를 만듬
+
+* 오리, 거위, Quackables를 추적하기 위해 컴포지트 패턴을 사용함
+
+* Quackables가 Quack()했을 때 알림받음
+
+### MVC
+
+##### 전략
+
+* View : 모델을 표현함
+
+* Controller : 사용자 입력을 받고 무엇을 의미하는지 모델에게 집력함
+
+* Model : 데이터, 상태, 애플리케이션 로직을 가짐
+
+* 컨트롤러는 모델의 옵저버가 됨, 몇몇 설계는 컨트롤러에 모델을 등록하고 변경을 받음
+
+* 컨트롤러는 입력을 해석하고 모델을 입력 기반으로 조작할 채깅ㅁ이 있음
+
+* 뷰에 코드를 작성하면 뷰 코드가 복잡해지고 두 가지 책임을 갖게 만들고(UI 관리, 모델 조작 로직), 뷰와 모델이 강하게 결합됨
+
+##### 옵저버
+
+* Model은 옵저버블하고, 다른 View, Controller는 옵저버임
+
+* Model이 notifyObservers()하면 다른 뷰, 컨트롤러들은 그것을 받음
+
+##### 전략
+
+View는 컨트롤러에게 행동을 위임해서 입력값을 넘기면 맞는 컨트롤러가 찾음
+
+##### 컴포지트
+
+View의 앞 부분 paint()는 모든 창에 있음
+
+### DJ Java
+
