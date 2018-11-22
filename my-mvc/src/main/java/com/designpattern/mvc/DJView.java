@@ -12,6 +12,16 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     BeatBar beatBar;
     JLabel bpmOutputLabel;
     
+    JLabel bpmLabel;
+    JTextField bpmTextField;
+    JButton setBPMButton;
+    JButton increaseBPMButton;
+    JButton decreaseBPMButton;
+    JMenuBar menuBar;
+    JMenu menu;
+    JMenuItem startMenuItem;
+    JMenuItem stopMenuItem;
+
     public DJView(ControllerInterface controller, BeatModelInterface model){
         this.controller = controller;
         this.model = model;
@@ -33,4 +43,6 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     public void updateBeat(){
         beatBar.setValue(100);
     }
+
+    
 }
