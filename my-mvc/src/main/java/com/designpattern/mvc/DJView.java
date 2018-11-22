@@ -1,7 +1,10 @@
 package com.designpattern.mvc;
 
+import java.awt.event.ActionEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class DJView implements ActionListener, BeatObserver, BPMObserver{
@@ -45,6 +48,18 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     }
 
     public void createControls(){
-        
+
+    }
+    public void enableStopMenuItem(){
+        stopMenuItem.setEnabled(true);
+    }
+    public void disableStopMenuItem(){
+        stopMenuItem.setEnabled(false);
+    }
+    public void enableStartMenuItem(){
+        startMenuItem.setEnabled(true);
+    }
+    public void disableStartMenuItem(){
+        startMenuItem.setEnabled(false);
     }
 }
