@@ -1,5 +1,12 @@
 package com.designpattern.mvc;
 
+import java.util.ArrayList;
+
+import javax.sound.midi.MetaEventListener;
+import javax.sound.midi.Sequence;
+import javax.sound.midi.Sequencer;
+import javax.sound.midi.Track;
+
 import com.designpattern.mvc.BeatModelInterface;
 
 public class BeatModel implements BeatModelInterface, MetaEventListener{
@@ -7,6 +14,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener{
     ArrayList beatObservers = new ArrayList();
     ArrayList bpmObservers = new ArrayList();
     int bpm = 90;
+    Sequence sequence;
+    Track track;
 
     public void initialize(){
         setUpMidi();
