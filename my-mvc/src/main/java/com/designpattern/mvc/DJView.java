@@ -1,6 +1,10 @@
 package com.designpattern.mvc;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,15 +13,20 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class DJView implements ActionListener, BeatObserver, BPMObserver{
     BeatModelInterface model;
     ControllerInterface controller;
     JFrame viewFrame;
     JPanel viewPanel;
+    
+    JPanel bpmPanel;
     BeatBar beatBar;
     JLabel bpmOutputLabel;
     
+    JFrame controlFrame;
+    JPanel controlPanel;
     JLabel bpmLabel;
     JTextField bpmTextField;
     JButton setBPMButton;
@@ -36,7 +45,19 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver{
     }
 
     public void createView(){
-
+        viewPanel = new JPanel(new GridLayout(1,2));
+        viewFrame = new JFrame("View");
+        viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        viewFrame.setSize(new Dimension(100,80));
+        bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
+        beatBar = new BeatBar();
+        bpmPanel.add(beatBar);
+        bpmPanel.add(bpmOutputLabel);
+        viewPanel.add(bpmPanel);
+        viewPanel.add(bpmPanel);
+        viewFrame.getContentPane().add(viewPanel, BorderLayout.CENTER);
+        viewFrame.pack();
+        viewFrame.setVisible(true);
     }
     public void updateBPM(){
         int bpm = model.getBPM();
