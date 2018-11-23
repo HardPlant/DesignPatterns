@@ -56,3 +56,9 @@ GoF 카탈로그에 23개의 디자인 패턴이 있음
 
 객체 패턴은 객체와 구성으로 정의되서, 런타임에 생성됨
 
+### GoF
+
+Erich Gamma
+Richard Helm
+Ralph Jhonson
+John Vlissides
