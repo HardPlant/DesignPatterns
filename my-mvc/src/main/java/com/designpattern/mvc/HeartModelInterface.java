@@ -2,8 +2,8 @@ package com.designpattern.mvc;
 
 public interface HeartModelInterface{
     public int getHeartRate();
-    public void registerBeatObserver(BeatObserver o);
-    public void removeBeatObserver(BeatObserver o);
-    public void registerBPMObserver(BPMObserver o);
-    public void removeBPMObserver(BPMObserver o);
+    public void registerObserver(BeatObserver o);
+    public void removeObserver(BeatObserver o);
+    public void registerObserver(BPMObserver o);
+    public void removeObserver(BPMObserver o);
 }
