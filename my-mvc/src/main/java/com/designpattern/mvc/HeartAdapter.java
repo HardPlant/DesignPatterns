@@ -3,8 +3,8 @@ package com.designpattern.mvc;
 public class HeartAdapter implements BeatModelInterface{
     HeartModelInterface heart;
 
-    public HeartAdapter(){
-
+    public HeartAdapter(HeartModelInterface heart){
+        this.heart = heart;
     }
     public void initialize() {
         
@@ -16,21 +16,21 @@ public class HeartAdapter implements BeatModelInterface{
         
     }
     public int getBPM() {
-        return 0;
+        return heart.getHeartRate();
     }
     public void setBPM(int bpm) {
         
     }
     public void registerObserver(BeatObserver o) {
-        
+        heart.registerObserver(o);
     }
     public void removeObserver(BeatObserver o) {
-        
+        heart.removeObserver(o);
     }
     public void registerObserver(BPMObserver o) {
-        
+        heart.registerObserver(o);
     }
     public void removeObserver(BPMObserver o) {
-        
+        heart.removeObserver(o);
     }
 }
