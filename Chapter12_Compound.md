@@ -123,6 +123,20 @@ BeatModelInterface를 어댑트해서 만들기로함
 
 ### MVC와 웹
 
+##### MVC
+
+1. View -> Controller
+
+2. Controller -> Model
+
+3. Controller가 뷰 변경
+
+4. Model이 View에게 변경됨을 알림 (notifyObservers)
+
+5. View가 변경된 정보를 Model에게 요청함 (update)
+
+##### MVC2
+
 browser/server 모델에 맞는 MVC를 만들어냄
 MVC2, Model 2로 명명하고 서블릿, JSP와 사용함
 
