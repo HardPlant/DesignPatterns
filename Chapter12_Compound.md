@@ -113,3 +113,7 @@ BPM을 변경할 수 있음
 
 HeartModel{getHeartRate(), registerBeatObserver(). registerBPMObserver(), /*...*/}
 
+### HeartModelInterface
+
+BeatModelInterface를 어댑트해서 만들기로함
+
