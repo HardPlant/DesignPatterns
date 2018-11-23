@@ -35,3 +35,15 @@ GoF 카탈로그에 23개의 디자인 패턴이 있음
 패턴은 템플릿을 따라가고, 동기와 적용성 세션이 있음
 
 * Interest, Motivation, Applicability, Structure, Participants, Collaboratons, Consequence, Sample Code, Known Use, Related Patterns 같은 항목을 포함해 문서화할 수 있음
+
+### 디자인 패턴 작성자가 되려면
+
+* 기존 패턴들을 잘 이해해야 함
+
+* 반성하고, 평가하는 시간을 가져야 함
+
+* 다른 사람들이 이해할 수 있도록 문서로 작성해야 함
+
+* 다른 사람들이 패턴을 적용하도록 해서 정제해야 함
+
+* 3자의 법칙을 잊지 않고, 다른 사람들에게 줘서 피드백을 받도록 함
