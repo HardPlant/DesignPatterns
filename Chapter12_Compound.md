@@ -106,3 +106,10 @@ BPM을 변경할 수 있음
 ##### 실행
 
 모델 인터페이스로 비트모델을 생성해서, 모델으로 컨트롤러를 만듬
+
+### 전략 패턴과 어댑터 패턴
+
+하트비트를 출력하도록 하는 클래스
+
+HeartModel{getHeartRate(), registerBeatObserver(). registerBPMObserver(), /*...*/}
+
