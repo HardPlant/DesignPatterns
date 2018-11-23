@@ -113,12 +113,40 @@ BPM을 변경할 수 있음
 
 HeartModel{getHeartRate(), registerBeatObserver(). registerBPMObserver(), /*...*/}
 
-### HeartModelInterface
+##### HeartModelInterface
 
 BeatModelInterface를 어댑트해서 만들기로함
 
-### HeartController
+##### HeartController
 
 모델을 컨트롤하는 컨트롤러
+
+### MVC와 웹
+
+browser/server 모델에 맞는 MVC를 만들어냄
+MVC2, Model 2로 명명하고 서블릿, JSP와 사용함
+
+1. Client -> Controller(/Servlet)
+
+클라이언트가 요청(폼 입력값 등)을 받으면 컨트롤러가 받음
+
+2. Controller -> Bean 인스턴스화
+
+서블릿이 컨트롤러로서 요청을 처리하고, 요청 처리 결과는 JavaBean 형태로 번들됨
+인스턴스화된 Bean은 데이터베이스에 요청하는 등의 일을 함
+
+3. Controller -> JSP/View
+
+뷰는 JSP로 나타내지고, JSP는 모델에 따라 페이지를 만듬
+
+4. JSP <-> View
+
+다음 활동을 위한 컨트롤을 만듬
+
+5. JSP를 HTTP 응답으로 보냄
+
+페이지가 브라우저에게 리턴되어 뷰로 표시됨
+사용자는 다른 요청을 보내는 등 일을 함
+
 
 
