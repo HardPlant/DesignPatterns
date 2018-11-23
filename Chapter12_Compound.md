@@ -117,3 +117,8 @@ HeartModel{getHeartRate(), registerBeatObserver(). registerBPMObserver(), /*...*
 
 BeatModelInterface를 어댑트해서 만들기로함
 
+### HeartController
+
+모델을 컨트롤하는 컨트롤러
+
+
