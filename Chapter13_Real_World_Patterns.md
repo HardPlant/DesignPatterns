@@ -27,3 +27,11 @@
 
 패턴은 간단한 문제로 설명되고 문서화되지는 않아서, 패턴을 모으는 카탈로그가 있음
 
+패턴은 규칙이나 법칙이 아닌 가이드라인임
+
+EJB 패턴같은 도메인 특화 패턴도 있음
+GoF 카탈로그에 23개의 디자인 패턴이 있음
+
+패턴은 템플릿을 따라가고, 동기와 적용성 세션이 있음
+
+* Interest, Motivation, Applicability, Structure, Participants, Collaboratons, Consequence, Sample Code, Known Use, Related Patterns 같은 항목을 포함해 문서화할 수 있음
