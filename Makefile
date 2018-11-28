@@ -1,5 +1,5 @@
-groupId=com.designpattern.mvc
-artifactId=my-mvc
+groupId=com.designpattern.delegation
+artifactId=my-delegation
 archetypeArtifactId="maven-archetype-quickstart"
 interactiveMode="false"
 module=App
