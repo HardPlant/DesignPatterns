@@ -3,8 +3,8 @@ package com.designpattern.delegation;
 public class DelegatorObject{
     DelegationObject delegationObject;
 
-    public DelegatorObject(DelegationObject obj){
-        this.delegationObject=obj;
+    public DelegatorObject(){
+        this.delegationObject=new DelegationObject();
     }
     public void delegate(){
         delegationObject.delegate();
